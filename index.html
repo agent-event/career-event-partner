@@ -5,7 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="社会課題を事業で解く覚悟を問う少人数制キャリアイベント。27卒限定・渋谷対面・各回15名・事前アンケート選考あり。役員・事業責任者との1on1｜株式会社エージェント">
 <title>"このままでいいのか"を、放置できなかった人へ。｜株式会社エージェント</title>
+<!-- スクロール復元を手動制御に切り替え — FV先頭表示を確実にする -->
+<script>(function(){if('scrollRestoration' in history){history.scrollRestoration='manual';}}());</script>
 <style>
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;overflow-x:hidden;}
 body{
@@ -18,6 +23,9 @@ body{
 img{max-width:100%;display:block;}
 a{color:inherit;text-decoration:none;}
 
+/* ============================================================
+   LAYOUT
+   ============================================================ */
 .wrap{max-width:480px;margin:0 auto;padding:0 20px;}
 .sec{padding:72px 0;}
 .sec-white{background:#FFFFFF;}
@@ -47,7 +55,9 @@ a{color:inherit;text-decoration:none;}
   background:linear-gradient(to right,#EC2103,#F25A07,#F4A006,#FACD03);
 }
 
-/* PRIMARY CTA — 赤ベタ（固定フッター / APPLY のみ） */
+/* ============================================================
+   BUTTONS
+   ============================================================ */
 .btn-red{
   display:inline-block;background:#EC2103;color:#FFF;
   font-size:15px;font-weight:700;
@@ -58,21 +68,22 @@ a{color:inherit;text-decoration:none;}
 .btn-red:hover{background:#C90000;color:#FFF;}
 .btn-red-full{display:block;width:100%;text-align:center;}
 
-/* SECONDARY CTA — アウトライン（中間セクション） */
 .btn-outline-red{
   display:block;width:100%;text-align:center;
-  color:#EC2103;border:1px solid rgba(236,33,3,.45);
+  color:#EC2103;border:1px solid rgba(236,33,3,.55);
   background:transparent;
   padding:16px 24px;
-  font-size:15px;font-weight:700;letter-spacing:.04em;
-  transition:background .15s,border-color .15s;cursor:pointer;
+  font-size:14px;font-weight:800;letter-spacing:.04em;
+  transition:background .2s,border-color .2s;cursor:pointer;
 }
 .btn-outline-red:hover{
   background:rgba(236,33,3,.08);
-  border-color:rgba(236,33,3,.7);
+  border-color:#EC2103;
 }
 
-/* FIXED HEADER */
+/* ============================================================
+   FIXED HEADER
+   ============================================================ */
 .site-header{
   position:fixed;top:0;left:0;right:0;height:52px;
   background:#0A0A0C;z-index:500;
@@ -81,7 +92,7 @@ a{color:inherit;text-decoration:none;}
 }
 .header-logo{
   display:flex;align-items:center;gap:8px;
-  font-size:12px;color:#666;letter-spacing:.04em;font-weight:500;
+  font-size:12px;color:#A8A8A8;letter-spacing:.04em;font-weight:500;
 }
 .header-logo img{height:22px;}
 .burger{
@@ -97,7 +108,9 @@ a{color:inherit;text-decoration:none;}
 .burger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
 .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 
-/* NAV OVERLAY */
+/* ============================================================
+   NAV OVERLAY
+   ============================================================ */
 .nav-overlay{
   position:fixed;top:0;left:0;right:0;bottom:0;background:#0A0A0C;
   z-index:490;display:flex;flex-direction:column;
@@ -113,84 +126,88 @@ a{color:inherit;text-decoration:none;}
 }
 .nav-overlay ul li a:hover{color:#EC2103;}
 .nav-overlay ul li a span{
-  font-size:10px;color:#555;letter-spacing:.2em;display:block;margin-bottom:4px;
+  font-size:10px;color:#8E8E8E;letter-spacing:.2em;display:block;margin-bottom:4px;
 }
 
-/* FIXED BOTTOM CTA */
+/* ============================================================
+   FIXED BOTTOM CTA — FV通過後に表示
+   ============================================================ */
 .fixed-apply{
-  position:fixed;bottom:0;left:0;right:0;display:flex;
+  position:fixed;bottom:0;left:0;right:0;
   z-index:480;background:#0A0A0C;
-  border-top:1px solid rgba(255,255,255,.08);height:60px;
+  border-top:1px solid rgba(255,255,255,.08);
+  height:56px;padding:8px 12px;
+  transform:translateY(100%);
+  opacity:0;
+  pointer-events:none;
+  transition:transform .25s ease,opacity .25s ease;
 }
-.fcta-btn{
-  flex:1;display:flex;align-items:center;justify-content:center;
-  font-size:11px;font-weight:700;color:#FFF;letter-spacing:.03em;
-  line-height:1.35;text-align:center;
-  transition:background .15s;padding:6px 8px;
+.fixed-apply.is-visible{
+  transform:translateY(0);
+  opacity:1;
+  pointer-events:auto;
 }
-.fcta-jun{background:#EC2103;border-right:1px solid rgba(0,0,0,.2);}
-.fcta-jun:hover{background:#C90000;}
-.fcta-jul{background:#B80000;}
-.fcta-jul:hover{background:#EC2103;}
+.fcta-single{
+  display:flex;align-items:center;justify-content:center;
+  width:100%;height:100%;
+  background:#EC2103;color:#FFF;
+  font-size:14px;font-weight:800;letter-spacing:.04em;
+  transition:background .15s;
+}
+.fcta-single:hover{background:#C90000;color:#FFF;}
 
 /* ============================================================
    HERO
    ============================================================ */
-.hero-tags{
-  display:flex;flex-wrap:wrap;gap:6px;
-  margin-bottom:28px;
+.hero-logo{height:22px;margin-bottom:28px;opacity:.85;display:block;}
+.hero-title{
+  font-size:clamp(32px,9.5vw,46px);
+  font-weight:900;color:#FFFFFF;
+  letter-spacing:-.03em;line-height:1.15;
+  margin-bottom:28px;max-width:340px;
 }
+.hero-title span{color:#EC2103;}
+.hero-lead{
+  font-size:15px;color:#D6D6D6;
+  line-height:1.9;margin-bottom:28px;
+  max-width:360px;
+}
+.hero-lead strong{color:#FFFFFF;font-weight:700;}
+.hero-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:28px;}
 .hero-tag{
-  font-size:11px;color:#888;
+  font-size:11px;color:#A8A8A8;
   border:1px solid rgba(255,255,255,.12);
-  padding:4px 10px;letter-spacing:.05em;font-weight:600;
-  white-space:nowrap;
+  padding:4px 10px;letter-spacing:.05em;font-weight:600;white-space:nowrap;
 }
-
-/* Hero Badge Row */
 .hero-badge-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;}
 .hero-badge{
   font-size:11px;font-weight:700;letter-spacing:.04em;
   color:#EC2103;border:1px solid rgba(236,33,3,.4);
   padding:5px 12px;white-space:nowrap;
 }
-
-/* Hero Meta Box */
 .hero-meta-box{
   background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
-  border-top:2px solid #EC2103;padding:20px 18px;
-  margin-bottom:24px;
+  border-top:2px solid #EC2103;padding:20px 18px;margin-bottom:24px;
 }
 .hero-meta{display:flex;flex-direction:column;gap:14px;}
 .hero-meta-row{display:flex;align-items:flex-start;gap:14px;font-size:14px;}
 .hero-meta-row .label{
-  font-size:10px;color:#777;letter-spacing:.12em;
+  font-size:10px;color:#A8A8A8;letter-spacing:.12em;
   min-width:48px;padding-top:3px;font-weight:700;text-transform:uppercase;
 }
 .hero-meta-row .val{color:#FFFFFF;font-weight:700;line-height:1.65;}
 
 /* FV PC layout */
 .fv-pc-grid{display:block;}
-.fv-pc-right{
-  width:calc(100% + 40px);margin-left:-20px;
-  margin-top:32px;
-}
+.fv-pc-right{width:calc(100% + 40px);margin-left:-20px;margin-top:32px;}
 
 /* Carousel */
-.carousel{
-  position:relative;width:100%;height:180px;overflow:hidden;
-}
+.carousel{position:relative;width:100%;height:180px;overflow:hidden;}
 .car-track{display:flex;width:300%;height:100%;transition:transform .35s ease;will-change:transform;}
 .car-slide{width:33.333%;flex-shrink:0;height:100%;}
 .car-slide img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;}
-.car-overlay{
-  position:absolute;top:0;left:0;right:0;bottom:0;
-  background:rgba(0,0,0,.3);pointer-events:none;
-}
-.car-dots{
-  position:absolute;bottom:10px;left:50%;transform:translateX(-50%);
-  display:flex;gap:7px;
-}
+.car-overlay{position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.3);pointer-events:none;}
+.car-dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:7px;}
 .car-dot{
   width:8px;height:8px;border-radius:50%;
   background:rgba(255,255,255,.3);cursor:pointer;
@@ -207,14 +224,15 @@ a{color:inherit;text-decoration:none;}
 .challenge-q{font-size:17px;font-weight:800;color:#FFFFFF;line-height:1.55;}
 
 /* ============================================================
-   ABOUT — 思想型
+   ABOUT
    ============================================================ */
 .about-office-inner{
   width:calc(100% + 40px);margin-left:-20px;
-  height:200px;overflow:hidden;margin-bottom:36px;opacity:.75;
+  height:200px;overflow:hidden;margin-bottom:36px;opacity:.92;
 }
 .about-office-inner img{width:100%;height:100%;object-fit:cover;object-position:center 30%;}
 .about-thought-body{font-size:15px;color:#3A4256;line-height:1.95;}
+.about-thought-body p+p{margin-top:18px;}
 .about-emphasis{
   font-size:24px;font-weight:900;color:#121214;
   line-height:1.35;margin:24px 0;letter-spacing:-.02em;
@@ -238,14 +256,27 @@ a{color:inherit;text-decoration:none;}
 .forwho-no-card{background:#E8E8E8;border-left:3px solid #BBBBBB;}
 .forwho-lbl-row{display:flex;align-items:center;gap:10px;margin-bottom:18px;}
 .forwho-lbl{font-size:14px;letter-spacing:.06em;font-weight:800;}
-.forwho-list{list-style:none;display:flex;flex-direction:column;gap:12px;}
-.forwho-list li{font-size:14px;line-height:1.75;display:flex;gap:10px;align-items:flex-start;}
+.forwho-list{list-style:none;display:flex;flex-direction:column;gap:16px;}
+.forwho-list li{
+  font-size:14px;line-height:1.7;
+  display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start;
+}
+.forwho-list .mark{
+  width:22px;height:22px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:900;line-height:1;flex-shrink:0;margin-top:1px;
+}
+.forwho-yes-card .mark{background:rgba(236,33,3,.1);color:#EC2103;}
+.forwho-no-card .mark{background:#D0D0D0;color:#555;}
 
 /* ============================================================
    WHAT YOU GET
    ============================================================ */
-.get-body{font-size:15px;color:#D0D0D0;line-height:1.9;}
-.get-body p+p{margin-top:28px;}
+.outcome-box{border-left:2px solid #EC2103;padding:4px 0 4px 20px;max-width:520px;}
+.outcome-box p{font-size:15px;color:#D6D6D6;line-height:1.9;margin-bottom:18px;}
+.outcome-box p:last-child{margin-bottom:0;}
+.outcome-lead{color:#FFFFFF !important;}
+.outcome-lead strong{color:#FFFFFF;font-weight:900;}
 
 /* ============================================================
    PROGRAM
@@ -274,10 +305,7 @@ a{color:inherit;text-decoration:none;}
   display:inline-block;font-size:11px;font-weight:700;
   color:#FFF;background:#EC2103;padding:2px 10px;letter-spacing:.06em;margin-bottom:10px;
 }
-.tl-h{
-  font-size:17px;font-weight:800;color:#121214;
-  margin-bottom:10px;line-height:1.45;display:flex;align-items:center;gap:8px;
-}
+.tl-h{font-size:17px;font-weight:800;color:#121214;margin-bottom:10px;line-height:1.45;display:flex;align-items:center;gap:8px;}
 .tl-body{font-size:14px;color:#3A4256;line-height:1.85;}
 .tl-note{margin-top:10px;font-size:12px;color:#A8A29F;padding-top:10px;border-top:1px solid #E9E9E9;}
 .tl-recv{font-size:13px;color:#A8A29F;font-weight:600;letter-spacing:.02em;}
@@ -298,7 +326,7 @@ a{color:inherit;text-decoration:none;}
 .sp-info .sp-name{font-size:19px;font-weight:900;color:#121214;margin-bottom:4px;letter-spacing:.01em;}
 .sp-info .sp-role{font-size:12px;color:#888;line-height:1.4;margin-bottom:2px;}
 .sp-info .sp-role-main{font-size:15px;color:#EC2103;font-weight:800;letter-spacing:.02em;}
-.sp-bio{font-size:13px;color:#3A4256;line-height:1.85;border-top:2px solid #EC2103;padding-top:14px;}
+.sp-bio{font-size:13px;color:#3A4256;line-height:1.8;border-top:1px solid #E8E8E8;padding-top:14px;}
 .sp-secret-card{
   background:#FFFFFF;border:1px dashed rgba(236,33,3,.25);
   padding:28px 22px;text-align:center;color:#121214;
@@ -312,28 +340,38 @@ a{color:inherit;text-decoration:none;}
    VOICE
    ============================================================ */
 .voice-cards{display:flex;flex-direction:column;gap:14px;}
-.voice-card{background:#FFFFFF;padding:20px 18px;border-left:2px solid #EC2103;}
+.voice-card{
+  background:#FFFFFF;padding:22px 20px;
+  border-left:2px solid #EC2103;
+  border-top:1px solid #EFEFEF;
+  border-right:1px solid #EFEFEF;
+  border-bottom:1px solid #EFEFEF;
+}
 .voice-q-label{
   display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;
   color:#EC2103;border:1px solid rgba(236,33,3,.35);
   padding:3px 10px;margin-bottom:12px;
 }
-.voice-text{font-size:14px;color:#2A3347;line-height:1.85;margin-bottom:12px;}
-.voice-attr{font-size:13px;color:#A8A29F;border-top:1px solid #EEEEEE;padding-top:10px;display:flex;align-items:center;gap:8px;}
+.voice-text{font-size:14px;color:#2A3347;line-height:1.8;margin-bottom:14px;}
+.voice-attr{font-size:12px;color:#8E8E8E;border-top:1px solid #EEEEEE;padding-top:10px;display:flex;align-items:center;gap:8px;}
 
 /* ============================================================
    OVERVIEW
    ============================================================ */
 .overview-table{display:flex;flex-direction:column;border-top:1px solid #E9E9E9;margin-bottom:28px;}
 .ov-row{display:flex;flex-direction:column;gap:6px;padding:16px 0;border-bottom:1px solid #E9E9E9;}
-.ov-dt{font-size:10px;font-weight:700;letter-spacing:.16em;color:#A8A29F;text-transform:uppercase;}
-.ov-dd{font-size:14px;color:#2A3347;line-height:1.8;}
-.ov-dd strong{color:#121214;font-weight:700;}
+.ov-dt{font-size:11px;font-weight:800;letter-spacing:.14em;color:#8E8E8E;text-transform:uppercase;}
+.ov-dd{font-size:15px;color:#2A3347;line-height:1.75;}
+.ov-dd strong{color:#121214;font-weight:800;}
 .ov-dd a{color:#EC2103;text-decoration:underline;}
+.ov-note{display:block;font-size:12px;color:#8E8E8E;margin-top:4px;line-height:1.6;}
 .attention-box{background:#F5F5F5;padding:20px 18px;border-top:2px solid #EC2103;}
 .attention-ttl{font-size:11px;font-weight:700;color:#EC2103;margin-bottom:12px;letter-spacing:.1em;text-transform:uppercase;}
-.attention-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
-.attention-list li{font-size:13px;color:#2A3347;line-height:1.7;display:flex;gap:8px;}
+.attention-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.attention-list li{
+  font-size:14px;color:#2A3347;line-height:1.65;
+  display:grid;grid-template-columns:18px 1fr;gap:8px;
+}
 .attention-list li::before{
   content:'!';background:#EC2103;color:#FFF;font-size:10px;font-weight:700;
   width:16px;height:16px;flex-shrink:0;
@@ -344,20 +382,34 @@ a{color:inherit;text-decoration:none;}
 /* ============================================================
    APPLY
    ============================================================ */
-.apply-context{font-size:14px;color:#C8C8C8;line-height:1.9;border-top:1px solid rgba(255,255,255,.08);padding-top:28px;margin-bottom:32px;}
-.apply-quote{font-size:17px;color:#FFFFFF;font-weight:700;margin:20px 0;line-height:1.6;border-left:2px solid #EC2103;padding-left:16px;}
-.ap-cards{display:flex;flex-direction:column;gap:14px;margin-bottom:24px;}
-.ap-card{background:#111113;border:1px solid rgba(236,33,3,.2);padding:22px 20px;}
-.ap-lbl{font-size:10px;color:#EC2103;letter-spacing:.18em;font-weight:700;margin-bottom:8px;display:block;}
-.apply-note{font-size:12px;color:#555;line-height:1.85;}
+.apply-context{
+  font-size:15px;color:#D6D6D6;line-height:1.9;
+  border-top:1px solid rgba(255,255,255,.12);
+  padding-top:28px;margin-bottom:32px;
+}
+.apply-context p+p{margin-top:16px;}
+.apply-quote{
+  font-size:16px;color:#FFFFFF;font-weight:900;
+  margin:18px 0;line-height:1.6;
+  border-left:2px solid #EC2103;padding-left:14px;
+}
+.ap-cards{display:flex;flex-direction:column;gap:16px;margin-bottom:24px;}
+.ap-card{background:#151518;border:1px solid rgba(255,255,255,.14);padding:24px 20px;}
+.ap-lbl{font-size:10px;color:#EC2103;letter-spacing:.18em;font-weight:700;margin-bottom:10px;display:block;}
+.ap-date{color:#FFFFFF;font-size:22px;font-weight:900;margin-bottom:3px;}
+.ap-time{color:#D6D6D6;font-size:15px;margin-top:6px;margin-bottom:14px;}
+.ap-card-note{font-size:11px;color:#A8A8A8;margin-bottom:18px;line-height:1.6;}
+.apply-note{font-size:13px;color:#A8A8A8;line-height:1.7;margin-top:20px;}
 .apply-note a{color:#EC2103;}
 
-/* SECTION CTA */
 .sec-cta{margin-top:40px;}
 
+/* ============================================================
+   FOOTER
+   ============================================================ */
 footer{
   background:#0A0A0C;padding:28px 20px;text-align:center;
-  font-size:12px;color:#333;border-top:1px solid rgba(255,255,255,.04);
+  font-size:12px;color:#8E8E8E;border-top:1px solid rgba(255,255,255,.04);
 }
 footer p+p{margin-top:4px;}
 
@@ -365,43 +417,46 @@ footer p+p{margin-top:4px;}
    PC BREAKPOINT
    ============================================================ */
 @media(min-width:768px){
+  body{padding-top:64px;}
   .wrap{max-width:1040px;padding:0 40px;}
+  .sec{padding:88px 0;}
+  .site-header{height:64px;padding:0 40px;}
 
   /* FV 2カラム */
   .fv-pc-grid{display:flex;gap:72px;align-items:flex-start;}
   .fv-pc-left{flex:1;min-width:0;}
-  .fv-pc-right{
-    width:440px;flex-shrink:0;
-    margin-left:0;margin-top:0;
-    position:sticky;top:72px;
-  }
+  .fv-pc-right{width:440px;flex-shrink:0;margin-left:0;margin-top:0;position:sticky;top:84px;}
   .fv-pc-right .carousel{height:360px;}
+
+  .hero-title{font-size:56px;max-width:540px;}
+  .hero-lead{max-width:560px;}
+  .hero-meta-box{max-width:480px;}
+  .hero-badge-row{max-width:480px;}
 
   /* FOR WHO 2カラム */
   .forwho-grid{flex-direction:row;align-items:stretch;}
   .forwho-card{flex:1;}
 
   /* SPEAKERS グリッド */
-  .sp-cards{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:#E8E8E8;}
+  .sp-cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
   .sp-card{border-bottom:none;}
-  .sp-secret-card{grid-column:1/3;border-top:2px solid #E8E8E8;}
+  .sp-secret-card{grid-column:1/3;}
+
+  /* VOICE 3カラム */
+  .voice-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
 
   /* OVERVIEW dt/dd横並び */
   .ov-row{flex-direction:row;align-items:baseline;gap:0;}
-  .ov-dt{min-width:160px;flex-shrink:0;padding-top:4px;}
+  .ov-dt{min-width:180px;flex-shrink:0;padding-top:4px;}
 
-  /* Program タイムライン幅 */
+  /* Program */
   .tl{max-width:680px;}
-
-  /* セクションの余白緩和 */
-  .sec{padding:80px 0;}
-  .hero-meta-box{max-width:440px;}
-  .hero-badge-row{max-width:440px;}
-
-  /* カルーセル上のtl-dot調整 */
   .tl-dot{box-shadow:0 0 0 4px #F1F0EF;}
   .tl-simple-dot{background:#F1F0EF;}
   .tl-simple-dot::after{box-shadow:0 0 0 4px #F1F0EF;}
+
+  /* Fixed CTA: PC右寄せ */
+  .fixed-apply{max-width:400px;left:auto;right:24px;bottom:24px;height:52px;}
 }
 </style>
 </head>
@@ -433,23 +488,15 @@ footer p+p{margin-top:4px;}
   </ul>
 </nav>
 
-<!-- FIXED BOTTOM CTA -->
-<div class="fixed-apply">
-  <a href="https://public.n-ats.hrmos.co/agent-network/events/2235953376870334464/schedules/2259653873817288704/apply"
-     class="fcta-btn fcta-jun">6月17日（水）<br>事前アンケートに進む</a>
-  <a href="https://public.n-ats.hrmos.co/agent-network/events/2235953376870334464/schedules/2259654106034929664/apply"
-     class="fcta-btn fcta-jul">7月8日（水）<br>事前アンケートに進む</a>
-</div>
-
+<main>
 
 <!-- ① FV -->
 <section class="sec-dark" style="padding:48px 0 64px;" id="top">
   <div class="wrap">
     <div class="fv-pc-grid">
 
-      <!-- LEFT: テキスト -->
       <div class="fv-pc-left">
-        <img src="img/logo-agent-horizontal.png" alt="株式会社エージェント" style="height:22px;margin-bottom:28px;opacity:.45;">
+        <img src="img/logo-agent-horizontal.png" alt="株式会社エージェント" class="hero-logo">
 
         <div class="hero-tags">
           <span class="hero-tag">27卒限定</span>
@@ -458,17 +505,15 @@ footer p+p{margin-top:4px;}
           <span class="hero-tag">事前選考あり</span>
         </div>
 
-        <h1 style="font-size:clamp(32px,9.5vw,46px);font-weight:900;color:#FFFFFF;letter-spacing:-.03em;line-height:1.15;margin-bottom:28px;max-width:300px;">
+        <h1 class="hero-title">
           &ldquo;このままで<br>いいのか&rdquo;を、<br>
-          <span style="color:#EC2103;">放置できなかった</span><br>人へ。
+          <span>放置できなかった</span><br>人へ。
         </h1>
 
-        <p style="font-size:15px;color:#A8A4A0;line-height:2.0;margin-bottom:28px;max-width:360px;">
-          社会の&ldquo;困った&rdquo;を、見過ごせない27卒へ。<br>
-          <br>
+        <p class="hero-lead">
+          社会の&ldquo;困った&rdquo;を見過ごせない27卒へ。<br>
           社会課題を事業で解く役員・事業責任者と向き合い、<br>
-          自分の原体験とキャリアの覚悟を問う<br>
-          <strong style="color:#FFFFFF;font-weight:700;">少人数制イベント。</strong>
+          自分の原体験とキャリアの覚悟を問う<strong>少人数制イベント。</strong>
         </p>
 
         <div class="hero-badge-row">
@@ -499,7 +544,6 @@ footer p+p{margin-top:4px;}
         </div>
       </div>
 
-      <!-- RIGHT: カルーセル -->
       <div class="fv-pc-right">
         <div class="carousel" id="carousel">
           <div class="car-track" id="carouselTrack">
@@ -529,10 +573,9 @@ footer p+p{margin-top:4px;}
     <span class="sec-label">WHAT IS ASKED</span>
     <div class="grad-line"></div>
     <h2 class="sec-h2 sec-h2-w" style="max-width:280px;">この2時間で、あなたに問われること</h2>
-    <p style="font-size:14px;color:#A0A0A0;line-height:1.85;margin-bottom:36px;max-width:520px;">
+    <p style="font-size:14px;color:#A8A8A8;line-height:1.85;margin-bottom:36px;max-width:520px;">
       このイベントは、会社説明会ではありません。社会課題に向き合う事業責任者・役員との対話を通じて、あなた自身の原体験、違和感、キャリアの選択基準を掘り下げる場です。
     </p>
-
     <div class="challenge-cards">
       <div class="challenge-card">
         <span class="challenge-n">Q 01</span>
@@ -570,18 +613,12 @@ footer p+p{margin-top:4px;}
 
     <div class="about-thought-body">
       <p>AGENTは、「優秀な人材を増やす」会社ではありません。</p>
-
-      <p style="margin-top:24px;">社会の課題に対して、</p>
-
+      <p>社会の課題に対して、</p>
       <p class="about-emphasis">&ldquo;自分がやるしかない&rdquo;</p>
-
       <p>と思える人を増やす会社です。</p>
-
-      <p style="margin-top:24px;">だから私たちは、若いうちから事業責任を持ち、社会に向き合う人材を育てたいと考えています。</p>
-
-      <p style="margin-top:24px;font-weight:700;color:#121214;font-size:16px;">2034年までに300事業を創出する。</p>
-
-      <div class="about-quote-block" style="margin-top:20px;">
+      <p>だから私たちは、若いうちから事業責任を持ち、社会に向き合う人材を育てたいと考えています。</p>
+      <p style="font-weight:700;color:#121214;font-size:16px;">2034年までに300事業を創出する。</p>
+      <div class="about-quote-block">
         「社会課題を、誰かではなく自分ごととして捉える人を増やしたい」という思想が、その根底にあります。
       </div>
     </div>
@@ -610,25 +647,25 @@ footer p+p{margin-top:4px;}
           <span class="forwho-lbl" style="color:#EC2103;">来てほしい方</span>
         </div>
         <ul class="forwho-list">
-          <li style="color:#2A3347;">
-            <span style="color:#EC2103;font-weight:800;flex-shrink:0;margin-top:2px;">→</span>
-            「この仕組みはおかしい」「なぜ困っている人が放置されるのか」と感じた原体験がある
+          <li>
+            <span class="mark">→</span>
+            <span style="color:#2A3347;">「この仕組みはおかしい」「なぜ困っている人が放置されるのか」と感じた原体験がある</span>
           </li>
-          <li style="color:#2A3347;">
-            <span style="color:#EC2103;font-weight:800;flex-shrink:0;margin-top:2px;">→</span>
-            社会課題を評論ではなく、事業として解決することに興味がある
+          <li>
+            <span class="mark">→</span>
+            <span style="color:#2A3347;">社会課題を評論ではなく、事業として解決することに興味がある</span>
           </li>
-          <li style="color:#2A3347;">
-            <span style="color:#EC2103;font-weight:800;flex-shrink:0;margin-top:2px;">→</span>
-            若いうちから事業責任・事業開発に挑戦したい
+          <li>
+            <span class="mark">→</span>
+            <span style="color:#2A3347;">若いうちから事業責任・事業開発に挑戦したい</span>
           </li>
-          <li style="color:#2A3347;">
-            <span style="color:#EC2103;font-weight:800;flex-shrink:0;margin-top:2px;">→</span>
-            安定した正解より、自分で問いを立てて動くキャリアを選びたい
+          <li>
+            <span class="mark">→</span>
+            <span style="color:#2A3347;">安定した正解より、自分で問いを立てて動くキャリアを選びたい</span>
           </li>
-          <li style="color:#2A3347;">
-            <span style="color:#EC2103;font-weight:800;flex-shrink:0;margin-top:2px;">→</span>
-            きれいごとではなく、事業として社会課題に向き合う難しさを知りたい
+          <li>
+            <span class="mark">→</span>
+            <span style="color:#2A3347;">きれいごとではなく、事業として社会課題に向き合う難しさを知りたい</span>
           </li>
         </ul>
       </div>
@@ -639,18 +676,17 @@ footer p+p{margin-top:4px;}
             <circle cx="12" cy="7" r="4" opacity=".5"/>
             <path d="M12 13c-4.42 0-8 1.79-8 4v2h16v-2c0-2.21-3.58-4-8-4z" opacity=".4"/>
           </svg>
-          <span class="forwho-lbl" style="color:#444;">向いていない方</span>
+          <span class="forwho-lbl" style="color:#555;">向いていない方</span>
         </div>
         <ul class="forwho-list">
-          <li style="color:#555;"><span style="color:#999;font-weight:800;flex-shrink:0;margin-top:2px;">×</span>なんとなく就活イベントに参加したい方</li>
-          <li style="color:#555;"><span style="color:#999;font-weight:800;flex-shrink:0;margin-top:2px;">×</span>会社説明だけを聞きたい方</li>
-          <li style="color:#555;"><span style="color:#999;font-weight:800;flex-shrink:0;margin-top:2px;">×</span>条件面だけで企業を比較したい方</li>
-          <li style="color:#555;"><span style="color:#999;font-weight:800;flex-shrink:0;margin-top:2px;">×</span>社会課題への関心はあるが、自分で行動する意思がない方</li>
+          <li><span class="mark">×</span><span style="color:#555;">なんとなく就活イベントに参加したい方</span></li>
+          <li><span class="mark">×</span><span style="color:#555;">会社説明だけを聞きたい方</span></li>
+          <li><span class="mark">×</span><span style="color:#555;">条件面だけで企業を比較したい方</span></li>
+          <li><span class="mark">×</span><span style="color:#555;">社会課題への関心はあるが、自分で行動する意思がない方</span></li>
         </ul>
       </div>
 
     </div>
-
     <div class="sec-cta">
       <a href="#apply" class="btn-outline-red">事前アンケートに進む</a>
     </div>
@@ -666,11 +702,10 @@ footer p+p{margin-top:4px;}
     <span class="sec-label">WHAT YOU GET</span>
     <div class="grad-line"></div>
     <h2 class="sec-h2 sec-h2-w" style="max-width:280px;">このイベントで得られるもの</h2>
-
-    <div class="get-body" style="max-width:520px;">
-      <p>このイベントで得られるのは、「企業理解」ではありません。</p>
+    <div class="outcome-box">
+      <p class="outcome-lead">このイベントで得られるのは、<strong>「企業理解」ではありません。</strong></p>
       <p>自分は何に怒り、何を変えたくて、どんな人生を選びたいのか。</p>
-      <p>その輪郭を、事業責任者との対話を通じて<strong>言語化する2時間です。</strong></p>
+      <p>その輪郭を、事業責任者との対話を通じて<strong style="color:#FFFFFF;">言語化する2時間です。</strong></p>
     </div>
   </div>
 </section>
@@ -686,7 +721,6 @@ footer p+p{margin-top:4px;}
     <h2 class="sec-h2">タイムスケジュール</h2>
 
     <div class="tl">
-
       <div class="tl-item" style="margin-bottom:28px;">
         <div class="tl-simple-dot"></div>
         <p class="tl-recv">受付開始（開始15分前）</p>
@@ -734,7 +768,6 @@ footer p+p{margin-top:4px;}
           </div>
         </div>
       </div>
-
     </div>
 
     <div class="sec-cta">
@@ -750,10 +783,9 @@ footer p+p{margin-top:4px;}
     <span class="sec-label">SPEAKERS</span>
     <div class="grad-line"></div>
     <h2 class="sec-h2">登壇者紹介</h2>
-    <p style="font-size:13px;color:#A8A29F;letter-spacing:.06em;margin-bottom:28px;">エージェントを代表する役員・事業責任者</p>
+    <p style="font-size:13px;color:#8E8E8E;letter-spacing:.06em;margin-bottom:28px;">エージェントを代表する役員・事業責任者</p>
 
     <div class="sp-cards">
-
       <div class="sp-card">
         <div class="sp-head">
           <div class="sp-photo"><img src="img/speaker_otsuka.png" alt="大塚将通"></div>
@@ -786,7 +818,6 @@ footer p+p{margin-top:4px;}
         <p class="sp-secret-sub">エージェントを代表する事業責任者が登壇予定。開催直前にこのページで発表します。</p>
         <span class="sp-secret-badge">COMING SOON</span>
       </div>
-
     </div>
 
     <div class="sec-cta">
@@ -804,7 +835,6 @@ footer p+p{margin-top:4px;}
     <h2 class="sec-h2">参加者が向き合った問い</h2>
 
     <div class="voice-cards">
-
       <div class="voice-card">
         <span class="voice-q-label">自分は何のために働くのか</span>
         <p class="voice-text">漠然としていた就活やキャリアへの不安が、具体的な言葉として整理できた時間でした。モヤモヤしていたものが少しずつ輪郭を持ち始めました。</p>
@@ -831,7 +861,6 @@ footer p+p{margin-top:4px;}
           明治学院大学 / 4年・男性
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -849,8 +878,8 @@ footer p+p{margin-top:4px;}
         <dt class="ov-dt">開催日時</dt>
         <dd class="ov-dd">
           <strong>・2026年 6月17日（水）14:00〜16:00</strong><br>
-          <strong>・2026年 7月 8日（水）17:00〜19:00</strong><br>
-          <span style="font-size:12px;color:#A8A29F;">※ 開始15分前より受付開始</span>
+          <strong>・2026年 7月 8日（水）17:00〜19:00</strong>
+          <span class="ov-note">※ 開始15分前より受付開始</span>
         </dd>
       </div>
       <div class="ov-row">
@@ -859,7 +888,7 @@ footer p+p{margin-top:4px;}
       </div>
       <div class="ov-row">
         <dt class="ov-dt">定員</dt>
-        <dd class="ov-dd">各回 <strong>15名</strong><span style="font-size:12px;color:#A8A29F;margin-left:8px;">※ 超過時は事前アンケートで選考</span></dd>
+        <dd class="ov-dd">各回 <strong>15名</strong><span style="font-size:12px;color:#8E8E8E;margin-left:8px;">※ 超過時は事前アンケートで選考</span></dd>
       </div>
       <div class="ov-row">
         <dt class="ov-dt">申込締切</dt>
@@ -879,7 +908,7 @@ footer p+p{margin-top:4px;}
       </div>
       <div class="ov-row">
         <dt class="ov-dt">主催</dt>
-        <dd class="ov-dd">株式会社エージェント<br><span style="font-size:12px;color:#A8A29F;">東京証券取引所 TOKYO PRO Market 上場・証券コード 7098</span></dd>
+        <dd class="ov-dd">株式会社エージェント<span class="ov-note">東京証券取引所 TOKYO PRO Market 上場・証券コード 7098</span></dd>
       </div>
     </div>
 
@@ -917,17 +946,17 @@ footer p+p{margin-top:4px;}
     <div class="ap-cards">
       <div class="ap-card">
         <span class="ap-lbl">DATE 01</span>
-        <p style="font-size:20px;font-weight:900;color:#FFF;margin-bottom:3px;">6月17日（水）</p>
-        <p style="font-size:14px;color:#888;margin-bottom:16px;">14:00〜16:00　渋谷・対面実施</p>
-        <p style="font-size:11px;color:#555;margin-bottom:18px;">13:45 受付開始　申込締切 6/10（火）</p>
+        <p class="ap-date">6月17日（水）</p>
+        <p class="ap-time">14:00〜16:00　渋谷・対面実施</p>
+        <p class="ap-card-note">13:45 受付開始　申込締切 6/10（火）</p>
         <a href="https://public.n-ats.hrmos.co/agent-network/events/2235953376870334464/schedules/2259653873817288704/apply"
            class="btn-red btn-red-full">事前アンケートに進む</a>
       </div>
       <div class="ap-card">
         <span class="ap-lbl">DATE 02</span>
-        <p style="font-size:20px;font-weight:900;color:#FFF;margin-bottom:3px;">7月8日（水）</p>
-        <p style="font-size:14px;color:#888;margin-bottom:16px;">17:00〜19:00　渋谷・対面実施</p>
-        <p style="font-size:11px;color:#555;margin-bottom:18px;">16:45 受付開始　申込締切 7/1（火）</p>
+        <p class="ap-date">7月8日（水）</p>
+        <p class="ap-time">17:00〜19:00　渋谷・対面実施</p>
+        <p class="ap-card-note">16:45 受付開始　申込締切 7/1（火）</p>
         <a href="https://public.n-ats.hrmos.co/agent-network/events/2235953376870334464/schedules/2259654106034929664/apply"
            class="btn-red btn-red-full">事前アンケートに進む</a>
       </div>
@@ -939,6 +968,7 @@ footer p+p{margin-top:4px;}
   </div>
 </section>
 
+</main>
 
 <!-- FOOTER -->
 <footer>
@@ -946,32 +976,49 @@ footer p+p{margin-top:4px;}
   <p>© 2026 Agent Network Co., Ltd. All Rights Reserved.</p>
 </footer>
 
+<!-- FIXED BOTTOM CTA — DOM末尾に配置（スクロール復元の誤動作を防ぐ） -->
+<div class="fixed-apply" aria-label="固定申込ボタン">
+  <a href="#apply" class="fcta-single">事前アンケートに進む</a>
+</div>
+
 
 <script>
 (function(){
-  var burger = document.getElementById('burgerBtn');
+  /* ── スクロール復元：ハッシュなしURLは必ずFVから ── */
+  window.addEventListener('pageshow', function(){
+    if(!window.location.hash){ window.scrollTo({top:0,left:0,behavior:'auto'}); }
+  });
+  window.addEventListener('load', function(){
+    if(!window.location.hash){
+      requestAnimationFrame(function(){ window.scrollTo(0,0); });
+    }
+  });
+
+  /* ── バーガーメニュー ── */
+  var burger  = document.getElementById('burgerBtn');
   var overlay = document.getElementById('navOverlay');
   burger.addEventListener('click', function(){
     var open = overlay.classList.contains('open');
     if(open){
-      overlay.classList.remove('open');burger.classList.remove('open');
-      document.body.style.overflow='';
+      overlay.classList.remove('open'); burger.classList.remove('open');
+      document.body.style.overflow = '';
     } else {
-      overlay.classList.add('open');burger.classList.add('open');
-      document.body.style.overflow='hidden';
+      overlay.classList.add('open'); burger.classList.add('open');
+      document.body.style.overflow = 'hidden';
     }
   });
   overlay.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click',function(){
-      overlay.classList.remove('open');burger.classList.remove('open');
-      document.body.style.overflow='';
+    a.addEventListener('click', function(){
+      overlay.classList.remove('open'); burger.classList.remove('open');
+      document.body.style.overflow = '';
     });
   });
 
-  var track = document.getElementById('carouselTrack');
-  var dots  = document.querySelectorAll('.car-dot');
-  var total = track ? track.children.length : 0;
-  var cur   = 0, startX = 0;
+  /* ── カルーセル（循環ナビ） ── */
+  var track  = document.getElementById('carouselTrack');
+  var dots   = document.querySelectorAll('.car-dot');
+  var total  = track ? track.children.length : 0;
+  var cur    = 0, startX = 0;
 
   function goTo(n){
     cur = ((n % total) + total) % total;
@@ -988,6 +1035,18 @@ footer p+p{margin-top:4px;}
     });
     dots.forEach(function(d,i){ d.addEventListener('click', function(){ goTo(i); }); });
     goTo(0);
+  }
+
+  /* ── 固定CTA：FVを70%スクロール通過後に表示 ── */
+  var hero       = document.getElementById('top');
+  var fixedApply = document.querySelector('.fixed-apply');
+  if(hero && fixedApply && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        fixedApply.classList.toggle('is-visible', !entry.isIntersecting);
+      });
+    }, { threshold:0, rootMargin:'-70% 0px 0px 0px' });
+    io.observe(hero);
   }
 })();
 </script>
