@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="社会課題を事業で解く覚悟を問う少人数制キャリアイベント。27卒限定・渋谷対面・各回15名・事前アンケート選考あり。役員・事業責任者との1on1｜株式会社エージェント">
-<title>その違和感を、事業に変える覚悟はあるか。｜株式会社エージェント</title>
+<title>"このままでいいのか"を、放置できなかった人へ。｜株式会社エージェント</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;overflow-x:hidden;}
 body{
   font-family:'Meiryo','Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3',sans-serif;
-  background:#F1F0EF;color:#121214;
+  background:#0E0E10;color:#121214;
   line-height:1.8;-webkit-font-smoothing:antialiased;
   padding-top:52px;padding-bottom:60px;
   overflow-x:hidden;font-weight:500;
@@ -19,53 +19,55 @@ img{max-width:100%;display:block;}
 a{color:inherit;text-decoration:none;}
 
 .wrap{max-width:480px;margin:0 auto;padding:0 20px;}
-.sec{padding:64px 0;}
+.sec{padding:72px 0;}
 .sec-white{background:#FFFFFF;}
 .sec-cream{background:#F1F0EF;}
-.sec-dark{background:#121214;color:#FFFFFF;}
+.sec-dark{background:#0E0E10;color:#FFFFFF;}
 .sec-warm{background:#FFF7E8;}
+.sec-charcoal{background:#181818;color:#FFFFFF;}
 
 .sec-label{
   display:block;font-size:10px;letter-spacing:.22em;
   text-transform:uppercase;color:#EC2103;
-  margin-bottom:10px;font-weight:700;
+  margin-bottom:12px;font-weight:700;
 }
 .grad-line{
   height:2px;width:36px;
   background:linear-gradient(to right,#EC2103,#F25A07,#F4A006,#FACD03);
-  margin-bottom:22px;
+  margin-bottom:28px;
 }
 .sec-h2{
-  font-size:22px;font-weight:900;
-  line-height:1.45;letter-spacing:.01em;
-  margin-bottom:24px;color:#121214;
+  font-size:24px;font-weight:900;
+  line-height:1.4;letter-spacing:.01em;
+  margin-bottom:28px;color:#121214;
 }
 .sec-h2-w{color:#FFFFFF;}
 .grad-bar{
-  height:3px;
+  height:2px;
   background:linear-gradient(to right,#EC2103,#F25A07,#F4A006,#FACD03);
 }
 
 .btn-red{
   display:inline-block;background:#EC2103;color:#FFF;
   font-size:15px;font-weight:700;
-  padding:15px 28px;letter-spacing:.04em;
-  transition:background .15s;cursor:pointer;
-  border-radius:3px;text-align:center;
+  padding:18px 28px;letter-spacing:.04em;
+  transition:background .2s,transform .1s;cursor:pointer;
+  text-align:center;
 }
-.btn-red:hover,.btn-red:active{background:#D90000;color:#FFF;}
+.btn-red:hover{background:#C90000;color:#FFF;transform:translateY(-1px);}
+.btn-red:active{background:#B00000;transform:translateY(0);}
 .btn-red-full{display:block;width:100%;text-align:center;}
 
 /* FIXED HEADER */
 .site-header{
   position:fixed;top:0;left:0;right:0;height:52px;
-  background:#121214;z-index:500;
+  background:#0A0A0C;z-index:500;
   display:flex;align-items:center;justify-content:space-between;
-  padding:0 20px;border-bottom:1px solid rgba(255,255,255,.08);
+  padding:0 20px;border-bottom:1px solid rgba(255,255,255,.06);
 }
 .header-logo{
   display:flex;align-items:center;gap:8px;
-  font-size:12px;color:#A8A29F;letter-spacing:.04em;font-weight:500;
+  font-size:12px;color:#666;letter-spacing:.04em;font-weight:500;
 }
 .header-logo img{height:22px;}
 .burger{
@@ -83,28 +85,28 @@ a{color:inherit;text-decoration:none;}
 
 /* NAV OVERLAY */
 .nav-overlay{
-  position:fixed;top:0;left:0;right:0;bottom:0;background:#121214;
+  position:fixed;top:0;left:0;right:0;bottom:0;background:#0A0A0C;
   z-index:490;display:flex;flex-direction:column;
   align-items:center;justify-content:center;
   opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;
 }
 .nav-overlay.open{opacity:1;visibility:visible;}
 .nav-overlay ul{list-style:none;text-align:center;}
-.nav-overlay ul li{margin:14px 0;}
+.nav-overlay ul li{margin:12px 0;}
 .nav-overlay ul li a{
-  font-size:20px;font-weight:700;color:#FFF;letter-spacing:.04em;
+  font-size:18px;font-weight:700;color:#FFF;letter-spacing:.04em;
   padding:8px 20px;display:block;transition:color .15s;
 }
 .nav-overlay ul li a:hover{color:#EC2103;}
 .nav-overlay ul li a span{
-  font-size:10px;color:#A8A29F;letter-spacing:.2em;display:block;margin-bottom:4px;
+  font-size:10px;color:#555;letter-spacing:.2em;display:block;margin-bottom:4px;
 }
 
 /* FIXED BOTTOM CTA */
 .fixed-apply{
   position:fixed;bottom:0;left:0;right:0;display:flex;
-  z-index:480;background:#121214;
-  border-top:1px solid rgba(255,255,255,.1);height:60px;
+  z-index:480;background:#0A0A0C;
+  border-top:1px solid rgba(255,255,255,.08);height:60px;
 }
 .fcta-btn{
   flex:1;display:flex;align-items:center;justify-content:center;
@@ -112,29 +114,28 @@ a{color:inherit;text-decoration:none;}
   line-height:1.35;text-align:center;
   transition:background .15s;padding:6px 8px;
 }
-.fcta-jun{background:#EC2103;border-right:1px solid rgba(255,255,255,.15);}
-.fcta-jun:hover{background:#D90000;color:#FFF;}
-.fcta-jul{background:#D90000;}
+.fcta-jun{background:#EC2103;border-right:1px solid rgba(0,0,0,.2);}
+.fcta-jun:hover{background:#C90000;color:#FFF;}
+.fcta-jul{background:#B80000;}
 .fcta-jul:hover{background:#EC2103;color:#FFF;}
 
 /* HERO */
 .hero-tags{
-  display:flex;flex-wrap:nowrap;gap:6px;
-  margin-bottom:20px;overflow-x:auto;
+  display:flex;flex-wrap:wrap;gap:6px;
+  margin-bottom:28px;
 }
 .hero-tag{
-  font-size:11px;color:#FFFFFF;
-  border:1px solid rgba(255,255,255,.3);
-  background:rgba(255,255,255,.1);
+  font-size:11px;color:#999;
+  border:1px solid rgba(255,255,255,.15);
   padding:4px 10px;letter-spacing:.05em;font-weight:600;
-  border-radius:2px;white-space:nowrap;
+  white-space:nowrap;
 }
 
 /* Carousel */
 .carousel{
   position:relative;width:100%;
   height:240px;
-  overflow:hidden;margin-bottom:28px;
+  overflow:hidden;margin-bottom:40px;
 }
 .car-track{
   display:flex;width:300%;height:100%;
@@ -150,64 +151,98 @@ a{color:inherit;text-decoration:none;}
 }
 .car-dot{
   width:8px;height:8px;border-radius:50%;
-  background:rgba(255,255,255,.45);cursor:pointer;
-  transition:background .2s;border:1px solid rgba(255,255,255,.5);
+  background:rgba(255,255,255,.35);cursor:pointer;
+  transition:background .2s;border:1px solid rgba(255,255,255,.4);
 }
 .car-dot.active{background:#EC2103;border-color:#EC2103;}
 
 /* Hero Badge Row */
 .hero-badge-row{
-  display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;
+  display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;
 }
 .hero-badge{
   font-size:11px;font-weight:700;letter-spacing:.04em;
-  background:rgba(236,33,3,.15);color:#EC2103;
-  border:1px solid rgba(236,33,3,.5);
-  padding:5px 12px;border-radius:2px;white-space:nowrap;
+  color:#EC2103;
+  border:1px solid rgba(236,33,3,.45);
+  padding:5px 12px;white-space:nowrap;
 }
 
 /* Hero Meta Box */
 .hero-meta-box{
-  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);
-  border-top:3px solid #EC2103;padding:18px 16px;
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
+  border-top:2px solid #EC2103;padding:20px 18px;
 }
-.hero-meta{display:flex;flex-direction:column;gap:12px;}
+.hero-meta{display:flex;flex-direction:column;gap:14px;}
 .hero-meta-row{
-  display:flex;align-items:flex-start;gap:12px;font-size:14px;
+  display:flex;align-items:flex-start;gap:14px;font-size:14px;
 }
 .hero-meta-row .label{
-  font-size:11px;color:#777;letter-spacing:.1em;
+  font-size:10px;color:#555;letter-spacing:.12em;
   min-width:48px;padding-top:3px;font-weight:700;text-transform:uppercase;
 }
 .hero-meta-row .val{color:#FFFFFF;font-weight:700;line-height:1.7;}
 
 /* CHALLENGE */
-.challenge-cards{display:flex;flex-direction:column;gap:12px;}
+.challenge-cards{display:flex;flex-direction:column;gap:16px;}
 .challenge-card{
-  background:#1A1A1F;border-left:3px solid #EC2103;
-  border:1px solid rgba(236,33,3,.25);border-left:3px solid #EC2103;
-  padding:22px 20px;
+  border-left:2px solid #EC2103;
+  padding:22px 20px;background:#111113;
 }
 .challenge-n{
   font-size:10px;color:#EC2103;letter-spacing:.2em;font-weight:700;
-  margin-bottom:8px;display:block;
+  margin-bottom:10px;display:block;
 }
 .challenge-q{
-  font-size:16px;font-weight:800;color:#FFFFFF;line-height:1.55;
+  font-size:17px;font-weight:800;color:#FFFFFF;line-height:1.6;
+}
+
+/* ABOUT — 思想型 */
+.about-office-inner{
+  width:calc(100% + 40px);margin-left:-20px;
+  height:200px;overflow:hidden;margin-bottom:40px;
+  opacity:.8;
+}
+.about-office-inner img{
+  width:100%;height:100%;object-fit:cover;object-position:center 30%;
+}
+.about-thought-body{
+  font-size:15px;color:#3A4256;line-height:2.3;
+}
+.about-thought-body p{margin-bottom:0;}
+.about-thought-body br+br{display:none;}
+.about-emphasis{
+  font-size:24px;font-weight:900;color:#121214;
+  line-height:1.35;margin:24px 0;
+  letter-spacing:-.02em;
+}
+.about-quote-block{
+  border-left:2px solid #EC2103;
+  padding:16px 18px;margin:20px 0;
+  font-size:15px;line-height:1.85;color:#2A3347;
+}
+.about-footer-line{
+  margin-top:32px;font-size:12px;color:#A8A29F;
+  border-top:1px solid #E9E9E9;padding-top:20px;line-height:1.7;
 }
 
 /* FOR WHO */
 .forwho-grid{display:flex;flex-direction:column;gap:16px;}
-.forwho-card{padding:24px 20px;}
-.forwho-yes-card{background:#FFFFFF;border-left:4px solid #EC2103;}
-.forwho-no-card{background:#DCDCDC;border-left:4px solid #AAAAAA;}
-.forwho-icon-row{display:flex;align-items:center;gap:12px;margin-bottom:18px;}
-.forwho-lbl{font-size:15px;letter-spacing:.05em;font-weight:800;}
-.forwho-list{list-style:none;display:flex;flex-direction:column;gap:12px;}
+.forwho-card{padding:26px 22px;}
+.forwho-yes-card{background:#FFFFFF;border-left:3px solid #EC2103;}
+.forwho-no-card{background:#E8E8E8;border-left:3px solid #BBBBBB;}
+.forwho-lbl-row{display:flex;align-items:center;gap:10px;margin-bottom:20px;}
+.forwho-lbl{font-size:14px;letter-spacing:.06em;font-weight:800;}
+.forwho-list{list-style:none;display:flex;flex-direction:column;gap:14px;}
 .forwho-list li{
-  font-size:15px;line-height:1.7;
+  font-size:14px;line-height:1.75;
   display:flex;gap:10px;align-items:flex-start;
 }
+
+/* WHAT YOU GET */
+.get-body{
+  font-size:15px;color:#666;line-height:2.4;
+}
+.get-body strong{color:#FFFFFF;font-weight:800;}
 
 /* PROGRAM */
 .tl{
@@ -216,9 +251,9 @@ a{color:inherit;text-decoration:none;}
 }
 .tl::before{
   content:'';position:absolute;left:19px;top:20px;bottom:20px;
-  width:2px;background:#E9E9E9;
+  width:2px;background:#E0E0E0;
 }
-.tl-item{position:relative;margin-bottom:40px;}
+.tl-item{position:relative;margin-bottom:44px;}
 .tl-item:last-child{margin-bottom:0;}
 .tl-dot{
   position:absolute;left:-52px;top:0;
@@ -234,12 +269,12 @@ a{color:inherit;text-decoration:none;}
 }
 .tl-simple-dot::after{
   content:'';width:10px;height:10px;
-  background:#A8A29F;border-radius:50%;display:block;
+  background:#BBBBBB;border-radius:50%;display:block;
   box-shadow:0 0 0 4px #F1F0EF;
 }
 .tl-dur{
   display:inline-block;font-size:11px;font-weight:700;
-  color:#FFF;background:#EC2103;padding:2px 10px;border-radius:2px;
+  color:#FFF;background:#EC2103;padding:2px 10px;
   letter-spacing:.06em;margin-bottom:10px;
 }
 .tl-h{
@@ -253,20 +288,20 @@ a{color:inherit;text-decoration:none;}
   padding-top:10px;border-top:1px solid #E9E9E9;
 }
 .tl-recv{font-size:14px;color:#A8A29F;font-weight:600;letter-spacing:.02em;}
-.tl-img{width:100%;height:200px;margin-top:16px;overflow:hidden;border-radius:4px;}
+.tl-img{width:100%;height:200px;margin-top:16px;overflow:hidden;}
 .tl-img img{width:100%;height:100%;object-fit:cover;object-position:center;}
 
 /* SPEAKERS */
 .sp-cards{display:flex;flex-direction:column;gap:0;}
 .sp-card{
   background:#FFFFFF;padding:28px 22px;
-  border-bottom:3px solid #DDDDDD;
+  border-bottom:2px solid #E8E8E8;
 }
 .sp-card:last-of-type{border-bottom:none;}
 .sp-head{display:flex;gap:16px;align-items:flex-start;margin-bottom:18px;}
 .sp-photo{
   width:110px;height:110px;background:#E9E9E9;
-  border-radius:4px;flex-shrink:0;overflow:hidden;
+  flex-shrink:0;overflow:hidden;
 }
 .sp-photo img{width:100%;height:100%;object-fit:cover;}
 .sp-info{flex:1;}
@@ -278,17 +313,17 @@ a{color:inherit;text-decoration:none;}
   font-size:20px;font-weight:900;color:#121214;
   margin-bottom:4px;letter-spacing:.01em;
 }
-.sp-info .sp-role{font-size:12px;color:#666;line-height:1.4;margin-bottom:2px;}
-.sp-info .sp-role-main{font-size:16px;color:#EC2103;font-weight:800;letter-spacing:.02em;}
+.sp-info .sp-role{font-size:12px;color:#888;line-height:1.4;margin-bottom:2px;}
+.sp-info .sp-role-main{font-size:15px;color:#EC2103;font-weight:800;letter-spacing:.02em;}
 .sp-bio{
   font-size:14px;color:#3A4256;line-height:1.9;
   border-top:2px solid #EC2103;padding-top:16px;
 }
 .sp-secret-card{
-  background:#FFFFFF;border:1.5px dashed rgba(236,33,3,.3);
+  background:#FFFFFF;border:1px dashed rgba(236,33,3,.25);
   padding:32px 22px;text-align:center;color:#121214;
 }
-.sp-secret-icon{font-size:40px;font-weight:900;color:rgba(236,33,3,.35);margin-bottom:16px;}
+.sp-secret-icon{font-size:36px;font-weight:900;color:rgba(236,33,3,.3);margin-bottom:14px;}
 .sp-secret-ttl{font-size:16px;font-weight:800;margin-bottom:10px;}
 .sp-secret-sub{font-size:14px;color:#3A4256;line-height:1.9;margin-bottom:16px;}
 .sp-secret-badge{
@@ -297,45 +332,23 @@ a{color:inherit;text-decoration:none;}
 }
 
 /* VOICE */
-.voice-cards{display:flex;flex-direction:column;gap:14px;}
+.voice-cards{display:flex;flex-direction:column;gap:16px;}
 .voice-card{
-  background:#FFFFFF;padding:20px 18px;
-  border-left:3px solid #EC2103;
+  background:#FFFFFF;padding:22px 20px;
+  border-left:2px solid #EC2103;
 }
 .voice-q-label{
   display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;
-  color:#EC2103;border:1px solid rgba(236,33,3,.4);
-  padding:3px 10px;margin-bottom:12px;
+  color:#EC2103;border:1px solid rgba(236,33,3,.35);
+  padding:3px 10px;margin-bottom:14px;
 }
 .voice-text{
-  font-size:14px;color:#2A3347;line-height:1.9;margin-bottom:14px;
+  font-size:14px;color:#2A3347;line-height:1.95;margin-bottom:14px;
 }
 .voice-attr{
   font-size:13px;color:#A8A29F;
   border-top:1px solid #EEEEEE;padding-top:10px;
   display:flex;align-items:center;gap:8px;
-}
-
-/* ABOUT US */
-.about-office-inner{
-  width:calc(100% + 40px);margin-left:-20px;
-  height:220px;overflow:hidden;margin-bottom:32px;
-}
-.about-office-inner img{
-  width:100%;height:100%;object-fit:cover;object-position:center 30%;
-}
-.about-facts{display:flex;flex-direction:column;gap:26px;}
-.about-fact{display:flex;gap:16px;align-items:flex-start;}
-.about-icon-col{
-  display:flex;flex-direction:column;align-items:center;gap:4px;
-  min-width:40px;flex-shrink:0;
-}
-.about-n{font-size:18px;font-weight:900;color:#EC2103;line-height:1;}
-.about-txt{font-size:15px;color:#3A4256;line-height:1.95;}
-.about-txt strong{color:#121214;font-weight:700;}
-.about-footer{
-  margin-top:28px;font-size:12px;color:#A8A29F;
-  border-top:1px solid #E9E9E9;padding-top:20px;line-height:1.7;
 }
 
 /* OVERVIEW */
@@ -345,17 +358,17 @@ a{color:inherit;text-decoration:none;}
 }
 .ov-row{
   display:flex;flex-direction:column;gap:6px;
-  padding:16px 0;border-bottom:1px solid #E9E9E9;
+  padding:18px 0;border-bottom:1px solid #E9E9E9;
 }
 .ov-dt{font-size:10px;font-weight:700;letter-spacing:.16em;color:#A8A29F;text-transform:uppercase;}
-.ov-dd{font-size:15px;color:#2A3347;line-height:1.8;}
+.ov-dd{font-size:15px;color:#2A3347;line-height:1.85;}
 .ov-dd strong{color:#121214;font-weight:700;}
 .ov-dd a{color:#EC2103;text-decoration:underline;}
 .attention-box{
-  background:#F8F8F8;padding:20px 18px;
-  border-top:3px solid #EC2103;
+  background:#F5F5F5;padding:20px 18px;
+  border-top:2px solid #EC2103;
 }
-.attention-ttl{font-size:12px;font-weight:700;color:#EC2103;margin-bottom:12px;letter-spacing:.08em;}
+.attention-ttl{font-size:11px;font-weight:700;color:#EC2103;margin-bottom:12px;letter-spacing:.1em;text-transform:uppercase;}
 .attention-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
 .attention-list li{
   font-size:14px;color:#2A3347;line-height:1.7;display:flex;gap:8px;
@@ -368,21 +381,31 @@ a{color:inherit;text-decoration:none;}
 }
 
 /* APPLY */
+.apply-context{
+  font-size:14px;color:#555;line-height:2.3;
+  border-top:1px solid rgba(255,255,255,.08);
+  padding-top:32px;margin-bottom:36px;
+}
+.apply-context strong{color:#C0BDB8;}
+.apply-quote{
+  font-size:16px;color:#FFFFFF;font-weight:700;
+  margin:16px 0;line-height:1.7;
+}
 .ap-cards{display:flex;flex-direction:column;gap:16px;margin-bottom:28px;}
 .ap-card{
-  background:#1A1A1F;border:1px solid rgba(236,33,3,.25);
-  padding:22px 20px;
+  background:#111113;border:1px solid rgba(236,33,3,.2);
+  padding:24px 20px;
 }
-.ap-lbl{font-size:10px;color:#EC2103;letter-spacing:.18em;font-weight:700;margin-bottom:6px;display:block;}
-.apply-note{font-size:13px;color:#A8A29F;line-height:2;}
+.ap-lbl{font-size:10px;color:#EC2103;letter-spacing:.18em;font-weight:700;margin-bottom:8px;display:block;}
+.apply-note{font-size:13px;color:#444;line-height:2;}
 .apply-note a{color:#EC2103;}
 
 /* SECTION CTA */
-.sec-cta{margin-top:36px;}
+.sec-cta{margin-top:44px;}
 
 footer{
-  background:#121214;padding:28px 20px;text-align:center;
-  font-size:12px;color:#3A4256;border-top:1px solid rgba(255,255,255,.06);
+  background:#0A0A0C;padding:28px 20px;text-align:center;
+  font-size:12px;color:#333;border-top:1px solid rgba(255,255,255,.04);
 }
 footer p+p{margin-top:4px;}
 </style>
@@ -406,28 +429,29 @@ footer p+p{margin-top:4px;}
     <li><a href="#challenge"><span>01</span>問われること</a></li>
     <li><a href="#about"><span>02</span>エージェントとは</a></li>
     <li><a href="#forwho"><span>03</span>参加対象</a></li>
-    <li><a href="#program"><span>04</span>プログラム</a></li>
-    <li><a href="#speakers"><span>05</span>登壇者</a></li>
-    <li><a href="#voice"><span>06</span>参加者の声</a></li>
-    <li><a href="#overview"><span>07</span>イベント概要</a></li>
-    <li><a href="#apply"><span>08</span>申し込む</a></li>
+    <li><a href="#outcome"><span>04</span>得られるもの</a></li>
+    <li><a href="#program"><span>05</span>プログラム</a></li>
+    <li><a href="#speakers"><span>06</span>登壇者</a></li>
+    <li><a href="#voice"><span>07</span>参加者の声</a></li>
+    <li><a href="#overview"><span>08</span>イベント概要</a></li>
+    <li><a href="#apply"><span>09</span>申し込む</a></li>
   </ul>
 </nav>
 
 <!-- FIXED BOTTOM CTA -->
 <div class="fixed-apply">
   <a href="https://public.n-ats.hrmos.co/agent-network/events/2235953376870334464/schedules/2259653873817288704/apply"
-     class="fcta-btn fcta-jun">6月17日（水）<br>参加申込</a>
+     class="fcta-btn fcta-jun">6月17日（水）<br>事前アンケートに進む</a>
   <a href="https://public.n-ats.hrmos.co/agent-network/events/2235953376870334464/schedules/2259654106034929664/apply"
-     class="fcta-btn fcta-jul">7月8日（水）<br>参加申込</a>
+     class="fcta-btn fcta-jul">7月8日（水）<br>事前アンケートに進む</a>
 </div>
 
 
-<!-- ① HERO -->
-<section class="sec-dark" style="padding:40px 0 48px;" id="top">
+<!-- ① FV -->
+<section class="sec-dark" style="padding:48px 0 64px;" id="top">
   <div class="wrap">
 
-    <img src="img/logo-agent-horizontal.png" alt="株式会社エージェント" style="height:28px;margin-bottom:24px;opacity:.8;">
+    <img src="img/logo-agent-horizontal.png" alt="株式会社エージェント" style="height:24px;margin-bottom:28px;opacity:.5;">
 
     <div class="hero-tags">
       <span class="hero-tag">27卒限定</span>
@@ -436,8 +460,10 @@ footer p+p{margin-top:4px;}
       <span class="hero-tag">事前選考あり</span>
     </div>
 
-    <h1 style="font-size:clamp(26px,7vw,34px);font-weight:900;color:#FFFFFF;letter-spacing:-.02em;line-height:1.2;margin-bottom:20px;">
-      その違和感を、<br>事業に変える<br>覚悟はあるか。
+    <h1 style="font-size:clamp(32px,9.5vw,46px);font-weight:900;color:#FFFFFF;letter-spacing:-.03em;line-height:1.15;margin-bottom:32px;max-width:290px;">
+      &ldquo;このままで<br>いいのか&rdquo;を、<br>
+      <span style="color:#EC2103;">放置できなかった</span><br>
+      人へ。
     </h1>
 
   </div>
@@ -445,15 +471,9 @@ footer p+p{margin-top:4px;}
   <!-- Carousel -->
   <div class="carousel" id="carousel">
     <div class="car-track" id="carouselTrack">
-      <div class="car-slide">
-        <img src="img/hero_banner.png" alt="イベントバナー">
-      </div>
-      <div class="car-slide">
-        <img src="img/slide_2.jpg" alt="過去イベントの様子1">
-      </div>
-      <div class="car-slide">
-        <img src="img/slide_3.jpg" alt="過去イベントの様子2">
-      </div>
+      <div class="car-slide"><img src="img/hero_banner.png" alt="イベントバナー"></div>
+      <div class="car-slide"><img src="img/slide_2.jpg" alt="過去イベントの様子1"></div>
+      <div class="car-slide"><img src="img/slide_3.jpg" alt="過去イベントの様子2"></div>
     </div>
     <div class="car-dots">
       <div class="car-dot active"></div>
@@ -463,9 +483,16 @@ footer p+p{margin-top:4px;}
   </div>
 
   <div class="wrap">
-    <p style="font-size:14px;color:#B0ADA8;line-height:1.95;margin-bottom:24px;">
-      社会の"困った"に自分ごとの痛みを持つ27卒へ。<br>
-      <strong style="color:#FFFFFF;font-weight:700;">社会課題を事業で解く現役の事業責任者・役員と向き合い、自分のキャリアと覚悟を問う少人数制イベント。</strong>
+    <p style="font-size:15px;color:#777;line-height:2.4;margin-bottom:32px;">
+      社会の&ldquo;困った&rdquo;を、<br>
+      見過ごせない27卒へ。<br>
+      <br>
+      社会課題を事業で解く<br>
+      役員・事業責任者と向き合い、<br>
+      <br>
+      自分の原体験と、<br>
+      キャリアの覚悟を問う<br>
+      <strong style="color:#FFFFFF;font-weight:700;">少人数制イベント。</strong>
     </p>
 
     <div class="hero-badge-row">
@@ -496,14 +523,19 @@ footer p+p{margin-top:4px;}
 <div class="grad-bar"></div>
 
 
-<!-- ② CHALLENGE — このイベントで問われること -->
+<!-- ② WHAT IS ASKED — 問われること -->
 <section class="sec sec-dark" id="challenge">
   <div class="wrap">
     <span class="sec-label">WHAT IS ASKED</span>
     <div class="grad-line"></div>
-    <h2 class="sec-h2 sec-h2-w">この2時間で、<br>あなたに問われること</h2>
-    <p style="font-size:15px;color:#777;line-height:1.9;margin-bottom:28px;">
-      このイベントは、会社説明会ではありません。社会課題に向き合う事業責任者・役員との対話を通じて、あなた自身の原体験、違和感、キャリアの選択基準を掘り下げる場です。
+    <h2 class="sec-h2 sec-h2-w" style="max-width:260px;">この2時間で、<br>あなたに<br>問われること</h2>
+    <p style="font-size:14px;color:#555;line-height:2.2;margin-bottom:36px;">
+      このイベントは、会社説明会ではありません。<br>
+      <br>
+      社会課題に向き合う事業責任者・役員との<br>
+      対話を通じて、あなた自身の原体験、<br>
+      違和感、キャリアの選択基準を<br>
+      掘り下げる場です。
     </p>
 
     <div class="challenge-cards">
@@ -526,59 +558,49 @@ footer p+p{margin-top:4px;}
 <div class="grad-bar"></div>
 
 
-<!-- ③ ABOUT US -->
+<!-- ③ ABOUT US — 思想型 -->
 <section class="sec sec-cream" id="about">
   <div class="wrap">
     <span class="sec-label">ABOUT US</span>
     <div class="grad-line"></div>
-    <h2 class="sec-h2">AGENTは、社会課題を<br>事業開発で解く会社です</h2>
+    <h2 class="sec-h2" style="max-width:300px;line-height:1.35;">
+      AGENTは、<br>
+      <span style="color:#EC2103;">&ldquo;自分がやるしかない&rdquo;</span><br>
+      と思える人を<br>増やしたい。
+    </h2>
 
     <div class="about-office-inner">
       <img src="img/office.jpg" alt="株式会社エージェント オフィス">
     </div>
 
-    <div class="about-facts">
+    <div class="about-thought-body">
+      <p>AGENTは、<br>
+      「優秀な人材を増やす」<br>
+      会社ではありません。</p>
 
-      <div class="about-fact">
-        <div class="about-icon-col">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="#EC2103">
-            <path d="M12 3L2 12h3v8h6v-5h2v5h6v-8h3L12 3z"/>
-          </svg>
-          <span class="about-n">01</span>
-        </div>
-        <p class="about-txt">
-          私たちは、<strong>社会課題を事業開発によって解決する事業開発ファーム</strong>です。課題の深いところに踏み込み、既存の仕組みを変える事業を、自分たちの手で作ります。
-        </p>
+      <p style="margin-top:28px;">社会の課題に対して、</p>
+
+      <p class="about-emphasis">&ldquo;自分がやるしかない&rdquo;</p>
+
+      <p>と思える人を増やす会社です。</p>
+
+      <p style="margin-top:28px;">だから私たちは、<br>
+      若いうちから事業責任を持ち、<br>
+      社会に向き合う人材を<br>
+      育てたいと考えています。</p>
+
+      <p style="margin-top:28px;font-weight:700;color:#121214;font-size:16px;">2034年までに300事業を創出する。</p>
+
+      <p style="margin-top:16px;">その目標の根底にあるのは、</p>
+
+      <div class="about-quote-block" style="margin-top:16px;">
+        「社会課題を、<br>
+        誰かではなく自分ごととして捉える人を増やしたい」<br>
+        <span style="font-size:13px;color:#888;">という思想です。</span>
       </div>
-
-      <div class="about-fact">
-        <div class="about-icon-col">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="#EC2103">
-            <path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 3.21-1.81 6-4.72 7.28L13 17v5h5l-1.22-1.22C19.91 19.07 22 15.76 22 12c0-5.18-3.95-9.45-9-9.95zM11 2.05C5.95 2.55 2 6.82 2 12c0 3.76 2.09 7.07 5.22 8.78L6 22h5v-5l-2.28 2.28C6.81 18 5 15.21 5 12c0-4.08 3.05-7.44 7-7.93V2.05z"/>
-          </svg>
-          <span class="about-n">02</span>
-        </div>
-        <p class="about-txt">
-          <strong>2034年までに300事業の創出</strong>を、本気で目指しています。大きな目標は、本気で動く人間にしか意味がない。だから私たちは、動き続けます。
-        </p>
-      </div>
-
-      <div class="about-fact">
-        <div class="about-icon-col">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="#EC2103">
-            <circle cx="12" cy="7" r="4"/>
-            <path d="M12 13c-4.42 0-8 1.79-8 4v2h16v-2c0-2.21-3.58-4-8-4z"/>
-          </svg>
-          <span class="about-n">03</span>
-        </div>
-        <p class="about-txt">
-          新卒採用の目的は、<strong>社内起業家人材の育成・輩出</strong>です。事業を動かす側に立てる人間を育てる——それがエージェントの採用の軸です。
-        </p>
-      </div>
-
     </div>
 
-    <p class="about-footer">
+    <p class="about-footer-line">
       株式会社エージェント<br>
       東京証券取引所 TOKYO PRO Market 上場（証券コード：7098）
     </p>
@@ -593,12 +615,12 @@ footer p+p{margin-top:4px;}
   <div class="wrap">
     <span class="sec-label">FOR WHO</span>
     <div class="grad-line"></div>
-    <h2 class="sec-h2" style="margin-bottom:28px;">こんな方に来てほしい</h2>
+    <h2 class="sec-h2" style="margin-bottom:32px;">こんな方に<br>来てほしい</h2>
     <div class="forwho-grid">
 
       <div class="forwho-card forwho-yes-card">
-        <div class="forwho-icon-row">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="#EC2103">
+        <div class="forwho-lbl-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#EC2103">
             <circle cx="12" cy="7" r="4"/>
             <path d="M12 13c-4.42 0-8 1.79-8 4v2h16v-2c0-2.21-3.58-4-8-4z"/>
           </svg>
@@ -606,51 +628,51 @@ footer p+p{margin-top:4px;}
         </div>
         <ul class="forwho-list">
           <li style="color:#2A3347;">
-            <span style="color:#EC2103;font-weight:800;flex-shrink:0;">→</span>
+            <span style="color:#EC2103;font-weight:800;flex-shrink:0;margin-top:2px;">→</span>
             日常の中で「この仕組みはおかしい」「なぜ困っている人が放置されるのか」と感じた原体験がある
           </li>
           <li style="color:#2A3347;">
-            <span style="color:#EC2103;font-weight:800;flex-shrink:0;">→</span>
+            <span style="color:#EC2103;font-weight:800;flex-shrink:0;margin-top:2px;">→</span>
             社会課題を評論ではなく、事業として解決することに興味がある
           </li>
           <li style="color:#2A3347;">
-            <span style="color:#EC2103;font-weight:800;flex-shrink:0;">→</span>
+            <span style="color:#EC2103;font-weight:800;flex-shrink:0;margin-top:2px;">→</span>
             若いうちから事業責任・事業開発に挑戦したい
           </li>
           <li style="color:#2A3347;">
-            <span style="color:#EC2103;font-weight:800;flex-shrink:0;">→</span>
+            <span style="color:#EC2103;font-weight:800;flex-shrink:0;margin-top:2px;">→</span>
             安定した正解より、自分で問いを立てて動くキャリアを選びたい
           </li>
           <li style="color:#2A3347;">
-            <span style="color:#EC2103;font-weight:800;flex-shrink:0;">→</span>
+            <span style="color:#EC2103;font-weight:800;flex-shrink:0;margin-top:2px;">→</span>
             きれいごとではなく、事業として社会課題に向き合う難しさを知りたい
           </li>
         </ul>
       </div>
 
       <div class="forwho-card forwho-no-card">
-        <div class="forwho-icon-row">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="#AAAAAA">
+        <div class="forwho-lbl-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#AAAAAA">
             <circle cx="12" cy="7" r="4" opacity=".5"/>
             <path d="M12 13c-4.42 0-8 1.79-8 4v2h16v-2c0-2.21-3.58-4-8-4z" opacity=".4"/>
           </svg>
-          <span class="forwho-lbl" style="color:#333;">向いていない方</span>
+          <span class="forwho-lbl" style="color:#444;">向いていない方</span>
         </div>
         <ul class="forwho-list">
-          <li style="color:#444;">
-            <span style="color:#999;font-weight:800;flex-shrink:0;">×</span>
+          <li style="color:#555;">
+            <span style="color:#999;font-weight:800;flex-shrink:0;margin-top:2px;">×</span>
             なんとなく就活イベントに参加したい方
           </li>
-          <li style="color:#444;">
-            <span style="color:#999;font-weight:800;flex-shrink:0;">×</span>
+          <li style="color:#555;">
+            <span style="color:#999;font-weight:800;flex-shrink:0;margin-top:2px;">×</span>
             会社説明だけを聞きたい方
           </li>
-          <li style="color:#444;">
-            <span style="color:#999;font-weight:800;flex-shrink:0;">×</span>
+          <li style="color:#555;">
+            <span style="color:#999;font-weight:800;flex-shrink:0;margin-top:2px;">×</span>
             条件面だけで企業を比較したい方
           </li>
-          <li style="color:#444;">
-            <span style="color:#999;font-weight:800;flex-shrink:0;">×</span>
+          <li style="color:#555;">
+            <span style="color:#999;font-weight:800;flex-shrink:0;margin-top:2px;">×</span>
             社会課題への関心はあるが、自分で行動する意思がない方
           </li>
         </ul>
@@ -659,13 +681,40 @@ footer p+p{margin-top:4px;}
     </div>
 
     <div class="sec-cta">
-      <a href="#apply" class="btn-red btn-red-full">参加を申し込む</a>
+      <a href="#apply" class="btn-red btn-red-full">事前アンケートに進む</a>
     </div>
   </div>
 </section>
 
+<div class="grad-bar"></div>
 
-<!-- ⑤ PROGRAM -->
+
+<!-- ⑤ WHAT YOU GET — 得られるもの -->
+<section class="sec sec-charcoal" id="outcome">
+  <div class="wrap">
+    <span class="sec-label">WHAT YOU GET</span>
+    <div class="grad-line"></div>
+    <h2 class="sec-h2 sec-h2-w" style="max-width:260px;line-height:1.4;">このイベントで<br>得られるもの</h2>
+
+    <div class="get-body">
+      <p>このイベントで得られるのは、<br>
+      「企業理解」ではありません。</p>
+
+      <p style="margin-top:32px;">自分は何に怒り、<br>
+      何を変えたくて、<br>
+      どんな人生を選びたいのか。</p>
+
+      <p style="margin-top:32px;">その輪郭を、<br>
+      事業責任者との対話を通じて<br>
+      <strong>言語化する2時間です。</strong></p>
+    </div>
+  </div>
+</section>
+
+<div class="grad-bar"></div>
+
+
+<!-- ⑥ PROGRAM -->
 <section class="sec sec-cream" id="program">
   <div class="wrap">
     <span class="sec-label">PROGRAM</span>
@@ -725,13 +774,13 @@ footer p+p{margin-top:4px;}
     </div>
 
     <div class="sec-cta">
-      <a href="#apply" class="btn-red btn-red-full">参加を申し込む</a>
+      <a href="#apply" class="btn-red btn-red-full">事前アンケートに進む</a>
     </div>
   </div>
 </section>
 
 
-<!-- ⑥ SPEAKERS -->
+<!-- ⑦ SPEAKERS -->
 <section class="sec sec-white" id="speakers">
   <div class="wrap">
     <span class="sec-label">SPEAKERS</span>
@@ -790,18 +839,18 @@ footer p+p{margin-top:4px;}
     </div>
 
     <div class="sec-cta">
-      <a href="#apply" class="btn-red btn-red-full">参加を申し込む</a>
+      <a href="#apply" class="btn-red btn-red-full">事前アンケートに進む</a>
     </div>
   </div>
 </section>
 
 
-<!-- ⑦ VOICE -->
+<!-- ⑧ VOICE -->
 <section class="sec sec-warm" id="voice">
   <div class="wrap">
     <span class="sec-label">VOICE</span>
     <div class="grad-line"></div>
-    <h2 class="sec-h2">参加者が向き合った問い</h2>
+    <h2 class="sec-h2">参加者が<br>向き合った問い</h2>
 
     <div class="voice-cards">
 
@@ -811,7 +860,7 @@ footer p+p{margin-top:4px;}
           漠然としていた就活やキャリアへの不安を、言語化する大きな助けになった時間でした。自分の中でモヤモヤしていたものが少しずつ整理できたと感じています。
         </p>
         <div class="voice-attr">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="#A8A29F">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#C0BDB8">
             <circle cx="12" cy="7" r="4"/>
             <path d="M20 20c0-4.42-3.58-8-8-8s-8 3.58-8 8"/>
           </svg>
@@ -825,7 +874,7 @@ footer p+p{margin-top:4px;}
           AI時代の中で、私たち学生がこれから果たしていく役割について、じっくり考えるきっかけになりました。普段の就活では出会えない問いに向き合える時間でした。
         </p>
         <div class="voice-attr">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="#A8A29F">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#C0BDB8">
             <circle cx="12" cy="7" r="4"/>
             <path d="M20 20c0-4.42-3.58-8-8-8s-8 3.58-8 8"/>
           </svg>
@@ -839,7 +888,7 @@ footer p+p{margin-top:4px;}
           もっと詳しく、長くお話を聞きたいと思える時間でした。より多くの人が参加して、就職することの意味を学んでほしいと思える内容でした。
         </p>
         <div class="voice-attr">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="#A8A29F">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#C0BDB8">
             <circle cx="12" cy="7" r="4"/>
             <path d="M20 20c0-4.42-3.58-8-8-8s-8 3.58-8 8"/>
           </svg>
@@ -852,7 +901,7 @@ footer p+p{margin-top:4px;}
 </section>
 
 
-<!-- ⑧ OVERVIEW -->
+<!-- ⑨ OVERVIEW -->
 <section class="sec sec-white" id="overview">
   <div class="wrap">
     <span class="sec-label">OVERVIEW</span>
@@ -929,44 +978,53 @@ footer p+p{margin-top:4px;}
     </div>
 
     <div class="sec-cta">
-      <a href="#apply" class="btn-red btn-red-full">参加を申し込む</a>
+      <a href="#apply" class="btn-red btn-red-full">事前アンケートに進む</a>
     </div>
   </div>
 </section>
 
 
-<!-- ⑨ APPLY -->
+<!-- ⑩ APPLY -->
 <section class="sec sec-dark" id="apply">
   <div class="wrap">
     <span class="sec-label">APPLY</span>
     <div class="grad-line"></div>
     <h2 class="sec-h2 sec-h2-w">参加を申し込む</h2>
-    <p style="font-size:15px;color:#A8A29F;margin-bottom:32px;line-height:1.9;">
-      参加費は無料です。<br>
-      少人数制のため、定員に達し次第受付を終了します。
-    </p>
+
+    <div class="apply-context">
+      <p>申込後、参加希望理由・原体験に関する<br>
+      事前アンケートをお送りします。</p>
+
+      <p style="margin-top:24px;">私たちが見ているのは、<br>
+      学歴や就活力ではありません。</p>
+
+      <p class="apply-quote">&ldquo;なぜその違和感を見過ごせないのか&rdquo;</p>
+
+      <p>その問いに、<br>
+      自分の言葉で向き合えるかを<br>
+      見ています。</p>
+    </div>
 
     <div class="ap-cards">
       <div class="ap-card">
         <span class="ap-lbl">DATE 01</span>
-        <p style="font-size:18px;font-weight:900;color:#FFF;margin-bottom:3px;">6月17日（水）</p>
-        <p style="font-size:18px;font-weight:700;color:#FFF;margin-bottom:14px;">14:00〜16:00</p>
-        <p style="font-size:12px;color:#A8A29F;margin-bottom:18px;line-height:1.6;">渋谷・対面実施<br>※ 13:45 受付開始　申込締切 6/10（火）</p>
+        <p style="font-size:20px;font-weight:900;color:#FFF;margin-bottom:3px;">6月17日（水）</p>
+        <p style="font-size:16px;font-weight:700;color:#888;margin-bottom:16px;">14:00〜16:00</p>
+        <p style="font-size:12px;color:#555;margin-bottom:20px;line-height:1.7;">渋谷・対面実施<br>13:45 受付開始　申込締切 6/10（火）</p>
         <a href="https://public.n-ats.hrmos.co/agent-network/events/2235953376870334464/schedules/2259653873817288704/apply"
-           class="btn-red btn-red-full">この日程で申し込む</a>
+           class="btn-red btn-red-full">事前アンケートに進む</a>
       </div>
       <div class="ap-card">
         <span class="ap-lbl">DATE 02</span>
-        <p style="font-size:18px;font-weight:900;color:#FFF;margin-bottom:3px;">7月8日（水）</p>
-        <p style="font-size:18px;font-weight:700;color:#FFF;margin-bottom:14px;">17:00〜19:00</p>
-        <p style="font-size:12px;color:#A8A29F;margin-bottom:18px;line-height:1.6;">渋谷・対面実施<br>※ 16:45 受付開始　申込締切 7/1（火）</p>
+        <p style="font-size:20px;font-weight:900;color:#FFF;margin-bottom:3px;">7月8日（水）</p>
+        <p style="font-size:16px;font-weight:700;color:#888;margin-bottom:16px;">17:00〜19:00</p>
+        <p style="font-size:12px;color:#555;margin-bottom:20px;line-height:1.7;">渋谷・対面実施<br>16:45 受付開始　申込締切 7/1（火）</p>
         <a href="https://public.n-ats.hrmos.co/agent-network/events/2235953376870334464/schedules/2259654106034929664/apply"
-           class="btn-red btn-red-full">この日程で申し込む</a>
+           class="btn-red btn-red-full">事前アンケートに進む</a>
       </div>
     </div>
 
     <p class="apply-note">
-      ※ 申込確定後、事前アンケートをお送りします。<br>
       ※ お問い合わせは
       <a href="mailto:yuki.higasayama@agent-network.com">yuki.higasayama@agent-network.com</a>
       までご連絡ください。
