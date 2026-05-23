@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="役員・事業責任者と1対1で向き合える2時間。本気でキャリアと向き合う覚悟がある27卒学生のための採用イベント｜株式会社エージェント 渋谷・対面実施・参加無料">
-<title>本気でキャリアと向き合う覚悟がある人のための2時間｜株式会社エージェント</title>
+<title>上場企業役員・事業責任者と1on1｜株式会社エージェント</title>
 <style>
 /* ===== Reset ===== */
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;font-size:16px}
+html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden;}
 body{
   font-family:'Meiryo','Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3',sans-serif;
   background:#F1F0EF;
@@ -17,18 +17,11 @@ body{
   -webkit-font-smoothing:antialiased;
   padding-top:52px;
   padding-bottom:60px;
+  overflow-x:hidden;
+  font-weight:500;
 }
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
-
-/* ===== Variables ===== */
-/* bg: #F1F0EF / #FFFFFF
-   red: #EC2103 / deep: #D90000
-   orange: #F25A07  gold: #F4A006  yellow: #FACD03
-   black: #121214   charcoal: #2A3347 / #3A4256
-   gray: #A8A29F    lgray: #E9E9E9
-   white: #FFFFFF / warm-white: #FFF7E8
-*/
 
 /* ===== Utility ===== */
 .wrap{max-width:480px;margin:0 auto;padding:0 20px}
@@ -36,7 +29,6 @@ a{color:inherit;text-decoration:none}
 .sec-white{background:#FFFFFF}
 .sec-cream{background:#F1F0EF}
 .sec-dark{background:#121214;color:#FFFFFF}
-.sec-charcoal{background:#2A3347;color:#FFFFFF}
 .sec-warm{background:#FFF7E8}
 
 .sec-label{
@@ -50,16 +42,12 @@ a{color:inherit;text-decoration:none}
   background:linear-gradient(to right,#EC2103,#F25A07,#F4A006,#FACD03);
   margin-bottom:22px;
 }
-.grad-line-c{margin-left:auto;margin-right:auto}
-
 .sec-h2{
   font-size:22px;font-weight:900;
   line-height:1.45;letter-spacing:.01em;
   margin-bottom:24px;color:#121214;
 }
 .sec-h2-w{color:#FFFFFF}
-
-/* ===== Gradient deco ===== */
 .grad-bar{
   height:3px;
   background:linear-gradient(to right,#EC2103,#F25A07,#F4A006,#FACD03);
@@ -69,21 +57,13 @@ a{color:inherit;text-decoration:none}
 .btn-red{
   display:inline-block;
   background:#EC2103;color:#FFF;
-  font-size:14px;font-weight:700;
-  padding:14px 28px;letter-spacing:.04em;
+  font-size:15px;font-weight:700;
+  padding:15px 28px;letter-spacing:.04em;
   transition:background .15s;cursor:pointer;
   border-radius:3px;text-align:center;
 }
 .btn-red:hover,.btn-red:active{background:#D90000;color:#FFF}
 .btn-red-full{display:block;width:100%;text-align:center}
-.btn-outline-w{
-  display:inline-block;
-  border:1.5px solid rgba(255,255,255,.45);color:#FFF;
-  font-size:14px;font-weight:700;
-  padding:13px 24px;letter-spacing:.04em;
-  border-radius:3px;transition:all .15s;
-}
-.btn-outline-w:hover{border-color:#FFF;background:rgba(255,255,255,.08)}
 
 /* ===== FIXED HEADER ===== */
 .site-header{
@@ -95,9 +75,11 @@ a{color:inherit;text-decoration:none}
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 .header-logo{
+  display:flex;align-items:center;gap:8px;
   font-size:12px;color:#A8A29F;
   letter-spacing:.04em;font-weight:500;
 }
+.header-logo img{height:22px;}
 .burger{
   background:none;border:none;cursor:pointer;
   width:36px;height:36px;
@@ -161,99 +143,94 @@ a{color:inherit;text-decoration:none}
 .fcta-jul:hover{background:#EC2103;color:#FFF}
 
 /* ===== HERO ===== */
-.hero{
-  background:#FFFFFF;
-  padding:40px 0 52px;
-}
 .hero-tags{
-  display:flex;flex-wrap:wrap;gap:8px;
-  margin-bottom:28px;
+  display:flex;flex-wrap:nowrap;gap:6px;
+  margin-bottom:20px;overflow-x:auto;
 }
 .hero-tag{
   font-size:11px;color:#EC2103;
   border:1px solid rgba(236,33,3,.35);
-  padding:4px 12px;letter-spacing:.05em;font-weight:600;
-  border-radius:2px;
+  padding:4px 10px;letter-spacing:.05em;font-weight:600;
+  border-radius:2px;white-space:nowrap;
+}
+.hero-subcopy{
+  font-size:14px;font-weight:600;
+  color:#3A4256;line-height:1.6;
+  margin-bottom:10px;
+  padding:6px 10px;
+  background:#F8F8F8;
+  border-left:3px solid #EC2103;
+  border-radius:0 2px 2px 0;
 }
 .hero-h1{
-  font-size:clamp(24px,6.5vw,30px);
+  font-size:clamp(26px,7vw,34px);
   font-weight:900;
-  line-height:1.4;
+  line-height:1.3;
   letter-spacing:.01em;
-  margin-bottom:28px;
+  margin-bottom:20px;
   color:#121214;
 }
-.hero-h1 em{
-  color:#EC2103;font-style:normal;
-}
-.hero-banner{
-  background:#E9E9E9;
-  width:calc(100% + 40px);margin-left:-20px;
-  min-height:200px;
+.hero-h1 em{color:#EC2103;font-style:normal;}
+.hero-subsub{
+  font-size:14px;
+  color:#3A4256;line-height:1.9;
   margin-bottom:28px;
-  overflow:hidden;position:relative;
 }
-.hero-banner img{width:100%;height:100%;object-fit:cover}
-.hero-banner-placeholder{
-  position:absolute;top:50%;left:50%;
-  transform:translate(-50%,-50%);
-  font-size:13px;color:#A8A29F;text-align:center;
-  white-space:nowrap;
+.hero-subsub strong{color:#2A3347;font-weight:700;}
+.hero-banner{
+  width:100%;
+  margin-bottom:28px;
+  overflow:hidden;
 }
-.hero-sub{
-  font-size:16px;font-weight:600;
-  color:#2A3347;line-height:1.85;
-  margin-bottom:32px;
+.hero-banner img{width:100%;display:block;}
+.hero-meta-box{
+  background:#F8F8F8;
+  border:1px solid #E0E0E0;
+  border-top:3px solid #EC2103;
+  padding:18px 16px;
 }
-.hero-sub strong{color:#EC2103}
 .hero-meta{
-  display:flex;flex-direction:column;gap:8px;
-  padding-top:24px;
-  border-top:1px solid #E9E9E9;
+  display:flex;flex-direction:column;gap:12px;
 }
 .hero-meta-row{
-  display:flex;align-items:baseline;gap:10px;
-  font-size:13px;color:#3A4256;
+  display:flex;align-items:flex-start;gap:12px;
+  font-size:14px;
 }
 .hero-meta-row .label{
-  font-size:10px;color:#A8A29F;
-  letter-spacing:.12em;min-width:60px;
+  font-size:11px;color:#A8A29F;
+  letter-spacing:.1em;min-width:48px;
+  padding-top:3px;font-weight:700;text-transform:uppercase;
 }
-.hero-meta-row .val{color:#121214;font-weight:600}
+.hero-meta-row .val{color:#121214;font-weight:700;line-height:1.7;}
 
-/* ===== FOR WHO (was checklist) ===== */
+/* ===== FOR WHO ===== */
 .forwho-grid{
-  display:flex;flex-direction:column;gap:20px;
+  display:flex;flex-direction:column;gap:16px;
 }
 .forwho-card{
-  padding:24px 22px;border-radius:4px;
+  padding:24px 20px;border-radius:4px;
 }
-.forwho-yes{
-  background:#1A1A1F;
-  border-left:3px solid #EC2103;
+.forwho-yes-card{
+  background:#FFFFFF;
+  border-left:4px solid #EC2103;
 }
-.forwho-no{
-  background:#1A1A1F;
-  border-left:3px solid #3A4256;
+.forwho-no-card{
+  background:#DCDCDC;
+  border-left:4px solid #AAAAAA;
+}
+.forwho-icon-row{
+  display:flex;align-items:center;gap:12px;
+  margin-bottom:18px;
 }
 .forwho-lbl{
-  font-size:10px;letter-spacing:.2em;
-  margin-bottom:16px;display:block;
-  font-weight:700;
+  font-size:15px;letter-spacing:.05em;
+  font-weight:800;
 }
-.forwho-yes .forwho-lbl{color:#EC2103}
-.forwho-no .forwho-lbl{color:#A8A29F}
-.forwho-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+.forwho-list{list-style:none;display:flex;flex-direction:column;gap:12px;}
 .forwho-list li{
-  font-size:14px;line-height:1.7;
+  font-size:15px;line-height:1.7;
   display:flex;gap:10px;
-  color:#E9E9E9;
-}
-.forwho-yes .forwho-list li::before{
-  content:'→';color:#EC2103;flex-shrink:0;
-}
-.forwho-no .forwho-list li::before{
-  content:'×';color:#A8A29F;flex-shrink:0;
+  align-items:flex-start;
 }
 
 /* ===== PROGRAM ===== */
@@ -267,7 +244,7 @@ a{color:inherit;text-decoration:none}
   width:2px;background:#E9E9E9;
 }
 .tl-item{
-  position:relative;margin-bottom:36px;
+  position:relative;margin-bottom:40px;
 }
 .tl-item:last-child{margin-bottom:0}
 .tl-dot{
@@ -278,19 +255,19 @@ a{color:inherit;text-decoration:none}
   display:flex;align-items:center;justify-content:center;
   font-size:12px;font-weight:700;color:#FFF;
   flex-shrink:0;z-index:1;
-  box-shadow:0 0 0 4px #F1F0EF;
+  box-shadow:0 0 0 4px #FFFFFF;
 }
-.tl-dot-small{
-  position:absolute;left:-52px;top:8px;
-  width:40px;height:24px;
-  background:#F1F0EF;
+.tl-simple-dot{
+  position:absolute;left:-52px;top:50%;
+  transform:translateY(-50%);
+  width:40px;height:40px;
+  background:#FFFFFF;z-index:1;
   display:flex;align-items:center;justify-content:center;
-  z-index:1;
 }
-.tl-dot-small::after{
-  content:'';display:block;
-  width:10px;height:10px;
+.tl-simple-dot::after{
+  content:'';width:10px;height:10px;
   background:#A8A29F;border-radius:50%;
+  display:block;box-shadow:0 0 0 4px #FFFFFF;
 }
 .tl-dur{
   display:inline-block;
@@ -300,36 +277,29 @@ a{color:inherit;text-decoration:none}
   letter-spacing:.06em;margin-bottom:10px;
 }
 .tl-h{
-  font-size:17px;font-weight:800;
+  font-size:18px;font-weight:800;
   color:#121214;margin-bottom:10px;line-height:1.45;
+  display:flex;align-items:center;gap:8px;
 }
 .tl-body{
-  font-size:14px;color:#3A4256;line-height:1.9;
+  font-size:15px;color:#3A4256;line-height:1.9;
 }
 .tl-note{
-  margin-top:10px;font-size:12px;color:#A8A29F;
+  margin-top:10px;font-size:13px;color:#A8A29F;
   padding-top:10px;border-top:1px solid #E9E9E9;
 }
-.tl-simple{
-  display:flex;align-items:center;gap:12px;
-  padding:10px 0;
-}
-.tl-simple-dot{
-  position:absolute;left:-52px;top:50%;
-  transform:translateY(-50%);
-  width:40px;height:40px;
-  background:#F1F0EF;z-index:1;
-  display:flex;align-items:center;justify-content:center;
-}
-.tl-simple-dot::after{
-  content:'';width:10px;height:10px;
-  background:#A8A29F;border-radius:50%;
-  display:block;
-  box-shadow:0 0 0 4px #F1F0EF;
-}
 .tl-recv{
-  font-size:13px;color:#A8A29F;font-weight:600;
+  font-size:14px;color:#A8A29F;font-weight:600;
   letter-spacing:.02em;
+}
+.tl-img{
+  width:100%;height:200px;
+  margin-top:16px;overflow:hidden;
+  border-radius:4px;
+}
+.tl-img img{
+  width:100%;height:100%;
+  object-fit:cover;object-position:center;
 }
 
 /* ===== SPEAKERS ===== */
@@ -338,194 +308,138 @@ a{color:inherit;text-decoration:none}
 }
 .sp-card{
   background:#F1F0EF;
-  padding:28px 22px;
-  border-radius:4px;
+  padding:28px 22px;border-radius:4px;
 }
 .sp-head{
-  display:flex;gap:16px;
-  align-items:flex-start;
+  display:flex;gap:16px;align-items:flex-start;
   margin-bottom:18px;
 }
 .sp-photo{
-  width:72px;height:72px;
+  width:110px;height:110px;
   background:#E9E9E9;
-  border-radius:3px;flex-shrink:0;overflow:hidden;
-  border:2px solid #E9E9E9;
+  border-radius:4px;flex-shrink:0;overflow:hidden;
 }
-.sp-photo img{width:100%;height:100%;object-fit:cover}
+.sp-photo img{width:100%;height:100%;object-fit:cover;}
+.sp-info{flex:1;}
 .sp-info .sp-num{
   font-size:10px;color:#EC2103;letter-spacing:.2em;
   font-weight:700;margin-bottom:4px;display:block;
 }
 .sp-info .sp-name{
   font-size:20px;font-weight:900;color:#121214;
-  margin-bottom:2px;letter-spacing:.01em;
+  margin-bottom:6px;letter-spacing:.01em;
 }
 .sp-info .sp-role{
-  font-size:12px;color:#A8A29F;line-height:1.5;
+  font-size:12px;color:#666;line-height:1.4;margin-bottom:2px;
+}
+.sp-info .sp-role-main{
+  font-size:16px;color:#EC2103;font-weight:800;
+  letter-spacing:.02em;
 }
 .sp-bio{
-  font-size:13px;color:#3A4256;line-height:1.9;
-  border-top:1px solid #E9E9E9;
-  padding-top:16px;
+  font-size:14px;color:#3A4256;line-height:1.9;
+  border-top:1px solid #E9E9E9;padding-top:16px;
 }
 .sp-secret-card{
-  background:#121214;
+  background:#F1F0EF;
   border:1.5px dashed rgba(236,33,3,.3);
-  padding:32px 22px;
-  border-radius:4px;
-  text-align:center;
-  color:#FFFFFF;
+  padding:32px 22px;border-radius:4px;
+  text-align:center;color:#121214;
 }
 .sp-secret-icon{
-  font-size:36px;font-weight:900;
-  color:rgba(236,33,3,.4);
-  margin-bottom:16px;letter-spacing:.05em;
+  font-size:40px;font-weight:900;
+  color:rgba(236,33,3,.35);margin-bottom:16px;
 }
-.sp-secret-ttl{
-  font-size:16px;font-weight:800;
-  margin-bottom:10px;
-}
+.sp-secret-ttl{font-size:16px;font-weight:800;margin-bottom:10px;}
 .sp-secret-sub{
-  font-size:13px;color:#A8A29F;line-height:1.9;
-  margin-bottom:16px;
+  font-size:14px;color:#3A4256;line-height:1.9;margin-bottom:16px;
 }
 .sp-secret-badge{
-  display:inline-block;
-  font-size:10px;letter-spacing:.2em;
+  display:inline-block;font-size:10px;letter-spacing:.2em;
   color:#EC2103;border:1px solid rgba(236,33,3,.4);
   padding:4px 14px;
 }
 
-/* ===== PAST PHOTOS ===== */
-.photos-head{
-  margin-bottom:28px;
-}
-.photos-head p{
-  font-size:16px;font-weight:700;
-  color:#FFFFFF;line-height:1.65;
-}
-.photos-grid{
-  display:flex;flex-direction:column;gap:12px;
-}
-.photo-item{
-  background:rgba(255,255,255,.08);
-  width:100%;aspect-ratio:16/9;
-  overflow:hidden;border-radius:3px;
-  display:flex;align-items:center;justify-content:center;
-}
-.photo-item img{width:100%;height:100%;object-fit:cover}
-.photo-placeholder{
-  font-size:12px;color:rgba(255,255,255,.3);
-}
-
-/* ===== TESTIMONIALS ===== */
+/* ===== VOICE ===== */
 .voice-cards{
-  display:flex;flex-direction:column;gap:20px;
+  display:flex;flex-direction:column;gap:12px;
 }
 .voice-card{
   background:#FFFFFF;
-  padding:24px 22px;
-  border-radius:4px;
+  padding:20px 18px;border-radius:4px;
   border-left:3px solid #EC2103;
 }
 .voice-q{
-  font-size:26px;font-weight:900;color:#EC2103;
+  font-size:24px;font-weight:900;color:#EC2103;
   line-height:1;margin-bottom:8px;
 }
-.voice-text{
-  font-size:14px;color:#2A3347;
-  line-height:1.9;margin-bottom:16px;
+.voice-one{
+  font-size:16px;font-weight:700;
+  color:#2A3347;line-height:1.65;
+  margin-bottom:14px;
 }
-.voice-name{
-  font-size:12px;color:#A8A29F;
-  border-top:1px solid #E9E9E9;padding-top:12px;
-  line-height:1.6;
+.voice-attr{
+  font-size:13px;color:#A8A29F;
+  border-top:1px solid #EEEEEE;padding-top:10px;
+  display:flex;align-items:center;gap:8px;
 }
-.voice-name strong{display:block;color:#121214;font-size:13px;margin-bottom:1px}
 
 /* ===== ABOUT US ===== */
 .about-facts{
   display:flex;flex-direction:column;gap:26px;
-  max-width:480px;
 }
-.about-fact{display:flex;gap:20px;align-items:flex-start}
+.about-fact{display:flex;gap:16px;align-items:flex-start;}
+.about-icon-col{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  min-width:40px;flex-shrink:0;
+}
 .about-n{
-  font-size:22px;font-weight:900;color:#EC2103;
-  line-height:1;min-width:28px;flex-shrink:0;
-  margin-top:2px;
+  font-size:18px;font-weight:900;color:#EC2103;line-height:1;
 }
 .about-txt{
-  font-size:14px;color:#3A4256;line-height:1.95;
+  font-size:15px;color:#3A4256;line-height:1.95;
 }
-.about-txt strong{color:#121214;font-weight:700}
+.about-txt strong{color:#121214;font-weight:700;}
 .about-footer{
-  margin-top:28px;
-  font-size:12px;color:#A8A29F;
-  border-top:1px solid #E9E9E9;
-  padding-top:20px;line-height:1.7;
+  margin-top:28px;font-size:12px;color:#A8A29F;
+  border-top:1px solid #E9E9E9;padding-top:20px;line-height:1.7;
 }
 
-/* ===== EVENT OVERVIEW ===== */
+/* ===== OVERVIEW ===== */
 .overview-table{
   display:flex;flex-direction:column;
-  gap:0;border-top:1px solid #E9E9E9;
-  margin-bottom:28px;
+  border-top:1px solid #E9E9E9;margin-bottom:28px;
 }
 .ov-row{
   display:flex;flex-direction:column;gap:6px;
-  padding:16px 0;
-  border-bottom:1px solid #E9E9E9;
+  padding:16px 0;border-bottom:1px solid #E9E9E9;
 }
 .ov-dt{
   font-size:10px;font-weight:700;
-  letter-spacing:.16em;color:#A8A29F;
-  text-transform:uppercase;
+  letter-spacing:.16em;color:#A8A29F;text-transform:uppercase;
 }
 .ov-dd{
-  font-size:14px;color:#2A3347;line-height:1.8;
+  font-size:15px;color:#2A3347;line-height:1.8;
 }
-.ov-dd strong{color:#121214;font-weight:700}
-.ov-dd a{color:#EC2103;text-decoration:underline}
-.ov-notes{
-  background:#F1F0EF;
-  padding:20px 18px;border-radius:4px;
-  margin-bottom:24px;
-}
-.ov-notes-ttl{
-  font-size:12px;font-weight:700;
-  color:#121214;margin-bottom:12px;
-  letter-spacing:.04em;
-}
-.ov-notes ul{
-  list-style:none;display:flex;flex-direction:column;gap:8px;
-}
-.ov-notes ul li{
-  font-size:13px;color:#3A4256;
-  line-height:1.7;display:flex;gap:8px;
-}
-.ov-notes ul li::before{
-  content:'※';color:#EC2103;flex-shrink:0;font-weight:700;
-}
+.ov-dd strong{color:#121214;font-weight:700;}
+.ov-dd a{color:#EC2103;text-decoration:underline;}
 .attention-box{
-  background:#121214;
-  padding:20px 18px;border-radius:4px;
+  background:#F8F8F8;padding:20px 18px;border-radius:4px;
+  border-top:3px solid #EC2103;
 }
 .attention-ttl{
   font-size:12px;font-weight:700;
-  color:#EC2103;margin-bottom:12px;
-  letter-spacing:.08em;
+  color:#EC2103;margin-bottom:12px;letter-spacing:.08em;
 }
 .attention-list{
   list-style:none;display:flex;flex-direction:column;gap:8px;
 }
 .attention-list li{
-  font-size:13px;color:#E9E9E9;line-height:1.7;
+  font-size:14px;color:#2A3347;line-height:1.7;
   display:flex;gap:8px;
 }
 .attention-list li::before{
-  content:'!';
-  background:#EC2103;color:#FFF;
+  content:'!';background:#EC2103;color:#FFF;
   font-size:10px;font-weight:700;
   width:16px;height:16px;flex-shrink:0;
   display:flex;align-items:center;justify-content:center;
@@ -534,32 +448,20 @@ a{color:inherit;text-decoration:none}
 
 /* ===== APPLY ===== */
 .ap-cards{
-  display:flex;flex-direction:column;gap:16px;
-  margin-bottom:28px;
+  display:flex;flex-direction:column;gap:16px;margin-bottom:28px;
 }
 .ap-card{
-  background:#1A1A1F;
-  border:1px solid rgba(236,33,3,.25);
-  border-radius:4px;
-  padding:22px 20px;
+  background:#1A1A1F;border:1px solid rgba(236,33,3,.25);
+  border-radius:4px;padding:22px 20px;
 }
 .ap-lbl{
   font-size:10px;color:#EC2103;
-  letter-spacing:.18em;font-weight:700;
-  margin-bottom:6px;display:block;
-}
-.ap-date{
-  font-size:24px;font-weight:900;
-  color:#FFFFFF;margin-bottom:3px;
-}
-.ap-time{
-  font-size:13px;color:#A8A29F;margin-bottom:18px;line-height:1.6;
+  letter-spacing:.18em;font-weight:700;margin-bottom:6px;display:block;
 }
 .apply-note{
-  font-size:12px;color:#A8A29F;
-  line-height:2;
+  font-size:13px;color:#A8A29F;line-height:2;
 }
-.apply-note a{color:#EC2103}
+.apply-note a{color:#EC2103;}
 
 /* ===== FOOTER ===== */
 footer{
@@ -568,14 +470,17 @@ footer{
   font-size:12px;color:#3A4256;
   border-top:1px solid rgba(255,255,255,.06);
 }
-footer p+p{margin-top:4px}
+footer p+p{margin-top:4px;}
 </style>
 </head>
 <body>
 
 <!-- ===== FIXED HEADER ===== -->
 <header class="site-header">
-  <span class="header-logo">株式会社エージェント</span>
+  <div class="header-logo">
+    <img src="img/logo-agent-mark.png" alt="Agent">
+    株式会社エージェント
+  </div>
   <button class="burger" id="burgerBtn" aria-label="メニューを開く">
     <span></span><span></span><span></span>
   </button>
@@ -611,46 +516,48 @@ footer p+p{margin-top:4px}
 <section class="sec-white" style="padding:40px 0 52px;" id="top">
   <div class="wrap">
 
-    <div class="hero-tags" style="flex-wrap:nowrap;overflow-x:auto;">
-      <span class="hero-tag" style="white-space:nowrap;">27卒限定</span>
-      <span class="hero-tag" style="white-space:nowrap;">渋谷・対面実施</span>
-      <span class="hero-tag" style="white-space:nowrap;">参加無料</span>
-      <span class="hero-tag" style="white-space:nowrap;">定員15名</span>
+    <img src="img/logo-agent-horizontal.png" alt="株式会社エージェント" style="height:28px;margin-bottom:20px;">
+
+    <div class="hero-tags">
+      <span class="hero-tag">27卒限定</span>
+      <span class="hero-tag">渋谷・対面実施</span>
+      <span class="hero-tag">参加無料</span>
+      <span class="hero-tag">定員15名</span>
     </div>
 
+    <p class="hero-subcopy">本気でキャリアと向き合う覚悟がある人のための2時間</p>
+
     <h1 class="hero-h1">
-      本気でキャリアと向き合う<br>
-      <em>覚悟がある人のための</em><br>
-      2時間。
+      上場企業役員・事業責任者と<br><em>1on1</em>
     </h1>
 
   </div>
 
-  <!-- バナー画像（全幅） -->
   <div class="hero-banner">
     <img src="img/hero_banner.png" alt="イベントバナー">
-    <div class="hero-banner-placeholder">バナー画像 / img/hero_banner.jpg</div>
   </div>
 
   <div class="wrap">
 
-    <p class="hero-sub">
-      社会課題に本気で向きあい、事業を推進している<br>
+    <p class="hero-subsub">
+      社会課題に本気で向き合い、事業を推進している<br>
       <strong>役員・事業責任者と1対1で向き合える時間。</strong>
     </p>
 
-    <div class="hero-meta">
-      <div class="hero-meta-row">
-        <span class="label">日程</span>
-        <span class="val">6月17日（水）14:00～16:00<br>7月8日（水）17:00～19:00</span>
-      </div>
-      <div class="hero-meta-row">
-        <span class="label">会場</span>
-        <span class="val">東京・渋谷　対面実施</span>
-      </div>
-      <div class="hero-meta-row">
-        <span class="label">定員</span>
-        <span class="val">各回15名（定員超過時は選考あり）</span>
+    <div class="hero-meta-box">
+      <div class="hero-meta">
+        <div class="hero-meta-row">
+          <span class="label">日程</span>
+          <span class="val">6月17日（水）14:00～16:00<br>7月8日（水）17:00～19:00</span>
+        </div>
+        <div class="hero-meta-row">
+          <span class="label">会場</span>
+          <span class="val">東京・渋谷　対面実施</span>
+        </div>
+        <div class="hero-meta-row">
+          <span class="label">定員</span>
+          <span class="val">各回15名（定員超過時は選考あり）</span>
+        </div>
       </div>
     </div>
 
@@ -661,28 +568,58 @@ footer p+p{margin-top:4px}
 
 
 <!-- ===== FOR WHO ===== -->
-<section class="sec sec-dark" id="forwho">
+<section class="sec sec-cream" id="forwho">
   <div class="wrap">
     <span class="sec-label">FOR WHO</span>
     <div class="grad-line"></div>
-    <h2 class="sec-h2 sec-h2-w" style="margin-bottom:28px;">こんな方に来てほしい</h2>
+    <h2 class="sec-h2" style="margin-bottom:28px;">こんな方に来てほしい</h2>
     <div class="forwho-grid">
 
-      <div class="forwho-card forwho-yes" style="background:#FFFFFF;border-left:3px solid #EC2103;">
-        <span class="forwho-lbl" style="color:#EC2103;">来てほしい方</span>
+      <div class="forwho-card forwho-yes-card">
+        <div class="forwho-icon-row">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="#EC2103">
+            <circle cx="12" cy="7" r="4"/>
+            <path d="M12 13c-4.42 0-8 1.79-8 4v2h16v-2c0-2.21-3.58-4-8-4z"/>
+          </svg>
+          <span class="forwho-lbl" style="color:#EC2103;">来てほしい方</span>
+        </div>
         <ul class="forwho-list">
-          <li style="color:#2A3347;">自分自身のキャリアについて本気で向き合いたい人</li>
-          <li style="color:#2A3347;">10年後も「今が楽しい」と言える働き方をしたい人</li>
-          <li style="color:#2A3347;">AI時代に必要な市場価値を本気で考えたい人</li>
-          <li style="color:#2A3347;">役員や事業責任者と本気で話したい人</li>
+          <li style="color:#2A3347;">
+            <span style="color:#EC2103;font-weight:800;flex-shrink:0;">→</span>
+            自分自身のキャリアについて本気で向き合いたい人
+          </li>
+          <li style="color:#2A3347;">
+            <span style="color:#EC2103;font-weight:800;flex-shrink:0;">→</span>
+            10年後も「今が楽しい」と言える働き方をしたい人
+          </li>
+          <li style="color:#2A3347;">
+            <span style="color:#EC2103;font-weight:800;flex-shrink:0;">→</span>
+            AI時代に必要な市場価値を本気で考えたい人
+          </li>
+          <li style="color:#2A3347;">
+            <span style="color:#EC2103;font-weight:800;flex-shrink:0;">→</span>
+            役員や事業責任者と本気で話したい人
+          </li>
         </ul>
       </div>
 
-      <div class="forwho-card forwho-no" style="background:#1A1A1F;border-left:3px solid #3A4256;">
-        <span class="forwho-lbl" style="color:#A8A29F;">向いていない方</span>
+      <div class="forwho-card forwho-no-card">
+        <div class="forwho-icon-row">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="#AAAAAA">
+            <circle cx="12" cy="7" r="4" opacity=".5"/>
+            <path d="M12 13c-4.42 0-8 1.79-8 4v2h16v-2c0-2.21-3.58-4-8-4z" opacity=".4"/>
+          </svg>
+          <span class="forwho-lbl" style="color:#888;">向いていない方</span>
+        </div>
         <ul class="forwho-list">
-          <li style="color:#6B7280;">なんとなく就活をしている方</li>
-          <li style="color:#6B7280;">給料・福利厚生などの条件面のみで就活をしている方</li>
+          <li style="color:#888;">
+            <span style="color:#AAA;font-weight:800;flex-shrink:0;">×</span>
+            なんとなく就活をしている方
+          </li>
+          <li style="color:#888;">
+            <span style="color:#AAA;font-weight:800;flex-shrink:0;">×</span>
+            給料・福利厚生などの条件面のみで就活をしている方
+          </li>
         </ul>
       </div>
 
@@ -692,15 +629,14 @@ footer p+p{margin-top:4px}
 
 
 <!-- ===== PROGRAM ===== -->
-<section class="sec sec-cream" id="program">
+<section class="sec sec-white" id="program">
   <div class="wrap">
     <span class="sec-label">PROGRAM</span>
     <div class="grad-line"></div>
-    <h2 class="sec-h2">この2時間で起きること</h2>
+    <h2 class="sec-h2">タイムスケジュール</h2>
 
     <div class="tl">
 
-      <!-- 受付開始 -->
       <div class="tl-item" style="margin-bottom:28px;">
         <div class="tl-simple-dot"></div>
         <p class="tl-recv">受付開始（開始15分前）</p>
@@ -711,14 +647,19 @@ footer p+p{margin-top:4px}
         <div class="tl-dot">01</div>
         <div>
           <span class="tl-dur">30分</span>
-          <h3 class="tl-h" style="display:flex;align-items:center;gap:8px;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="#EC2103" style="flex-shrink:0;"><path d="M12 1a4 4 0 0 1 4 4v7a4 4 0 0 1-8 0V5a4 4 0 0 1 4-4zm-2 17.93V21h4v-2.07A8 8 0 0 0 20 11h-2a6 6 0 0 1-12 0H4a8 8 0 0 0 6 7.93z"/></svg>
+          <h3 class="tl-h">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#EC2103" style="flex-shrink:0;">
+              <path d="M12 1a4 4 0 0 1 4 4v7a4 4 0 0 1-8 0V5a4 4 0 0 1 4-4zm-2 17.93V21h4v-2.07A8 8 0 0 0 20 11h-2a6 6 0 0 1-12 0H4a8 8 0 0 0 6 7.93z"/>
+            </svg>
             登壇者3名による本音トーク
           </h3>
           <p class="tl-body">
             事前アンケートで集まったテーマをもとに、執行役員・事業責任者3名がトークセッションを行います。「なぜここで働くのか」「どうやってキャリアを作ってきたか」を、登壇者の本音で語ります。
           </p>
           <p class="tl-note">※ 参加確定後にお送りする事前アンケートで質問を受け付けます</p>
+          <div class="tl-img">
+            <img src="img/event_02.jpg" alt="登壇者トークセッション">
+          </div>
         </div>
       </div>
 
@@ -727,14 +668,22 @@ footer p+p{margin-top:4px}
         <div class="tl-dot">02</div>
         <div>
           <span class="tl-dur">90分</span>
-          <h3 class="tl-h" style="display:flex;align-items:center;gap:8px;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="#EC2103" style="flex-shrink:0;"><circle cx="9" cy="6" r="3.5"/><path d="M17 14c0-3.31-3.58-6-8-6s-8 2.69-8 6v2h16v-2z" opacity=".6"/><circle cx="17" cy="7" r="2.5"/><path d="M22 14c0-2.76-2.24-5-5-5-.9 0-1.74.26-2.45.7C15.49 11.08 17 12.92 17 15v1h5v-2z"/></svg>
+          <h3 class="tl-h">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#EC2103" style="flex-shrink:0;">
+              <circle cx="9" cy="6" r="3.5"/>
+              <path d="M17 14c0-3.31-3.58-6-8-6s-8 2.69-8 6v2h16v-2z" opacity=".6"/>
+              <circle cx="17" cy="7" r="2.5"/>
+              <path d="M22 14c0-2.76-2.24-5-5-5-.9 0-1.74.26-2.45.7C15.49 11.08 17 12.92 17 15v1h5v-2z"/>
+            </svg>
             登壇者と1対1で話せる時間
           </h3>
           <p class="tl-body">
             各自1名・15分の個別セッション。事前アンケートをもとに、こちら側で最適な登壇者をマッチングします。複数人数では聞けない悩みや本音を、1対1の15分で引き出してください。
           </p>
           <p class="tl-note">※ マッチング結果は開催前日までにご連絡します</p>
+          <div class="tl-img">
+            <img src="img/event_01.png" alt="1on1セッション" style="object-position:50% 15%;">
+          </div>
         </div>
       </div>
 
@@ -744,18 +693,17 @@ footer p+p{margin-top:4px}
 
 
 <!-- ===== SPEAKERS ===== -->
-<section class="sec sec-white" id="speakers">
+<section class="sec sec-cream" id="speakers">
   <div class="wrap">
     <span class="sec-label">SPEAKERS</span>
     <div class="grad-line"></div>
     <h2 class="sec-h2">登壇者紹介</h2>
-    <p style="font-size:12px;color:#A8A29F;letter-spacing:.06em;margin-bottom:32px;">
+    <p style="font-size:13px;color:#A8A29F;letter-spacing:.06em;margin-bottom:32px;">
       エージェントを代表する役員・事業責任者
     </p>
 
     <div class="sp-cards">
 
-      <!-- 大塚将通 -->
       <div class="sp-card">
         <div class="sp-head">
           <div class="sp-photo">
@@ -764,7 +712,8 @@ footer p+p{margin-top:4px}
           <div class="sp-info">
             <span class="sp-num">SPEAKER 01</span>
             <p class="sp-name">大塚 将通</p>
-            <p class="sp-role">株式会社エージェント<br>執行役員</p>
+            <p class="sp-role">株式会社エージェント</p>
+            <p class="sp-role-main">執行役員</p>
           </div>
         </div>
         <p class="sp-bio">
@@ -772,7 +721,6 @@ footer p+p{margin-top:4px}
         </p>
       </div>
 
-      <!-- 三浦宙也 -->
       <div class="sp-card">
         <div class="sp-head">
           <div class="sp-photo">
@@ -781,7 +729,8 @@ footer p+p{margin-top:4px}
           <div class="sp-info">
             <span class="sp-num">SPEAKER 02</span>
             <p class="sp-name">三浦 宙也</p>
-            <p class="sp-role">株式会社エージェント<br>事業責任者</p>
+            <p class="sp-role">株式会社エージェント</p>
+            <p class="sp-role-main">事業責任者</p>
           </div>
         </div>
         <p class="sp-bio">
@@ -789,12 +738,11 @@ footer p+p{margin-top:4px}
         </p>
       </div>
 
-      <!-- COMING SOON -->
       <div class="sp-secret-card">
         <div class="sp-secret-icon">？</div>
         <p class="sp-secret-ttl">残り1名は直前発表</p>
         <p class="sp-secret-sub">
-          エージェントを代表する<br>事業責任者が登壇予定です。<br>
+          エージェントを代表する事業責任者が登壇予定です。<br>
           開催直前にこのページで発表します。
         </p>
         <span class="sp-secret-badge">COMING SOON</span>
@@ -805,38 +753,7 @@ footer p+p{margin-top:4px}
 </section>
 
 
-<!-- ===== PAST PHOTOS ===== -->
-<section class="sec sec-charcoal" id="photos">
-  <div class="wrap">
-    <span class="sec-label">GALLERY</span>
-    <div class="photos-head">
-      <p>少人数だからこそ生まれる、<br>本音で話せる空気感をお届けします。</p>
-    </div>
-    <div class="photos-grid">
-      <div>
-        <div class="photo-item">
-          <img src="img/event_01.png" alt="過去開催の様子1">
-        </div>
-        <p style="font-size:13px;color:#A8A29F;margin-top:8px;line-height:1.6;">登壇者による本音トークセッション。少人数だから生まれる濃密な時間。</p>
-      </div>
-      <div>
-        <div class="photo-item">
-          <img src="img/event_02.jpg" alt="過去開催の様子2">
-        </div>
-        <p style="font-size:13px;color:#A8A29F;margin-top:8px;line-height:1.6;">1対1で向き合う個別セッション。普段の就活では聞けない本音を引き出す。</p>
-      </div>
-      <div>
-        <div class="photo-item">
-          <img src="img/event_03.jpg" alt="過去開催の様子3">
-        </div>
-        <p style="font-size:13px;color:#A8A29F;margin-top:8px;line-height:1.6;">定員15名・渋谷開催。参加者同士の交流も、このイベントの醍醐味。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ===== TESTIMONIALS ===== -->
+<!-- ===== VOICE ===== -->
 <section class="sec sec-warm" id="voice">
   <div class="wrap">
     <span class="sec-label">VOICE</span>
@@ -847,34 +764,37 @@ footer p+p{margin-top:4px}
 
       <div class="voice-card">
         <div class="voice-q">"</div>
-        <p class="voice-text">
-          漠然としていた就活やキャリアへの不安を、言語化する大きな助けになった時間でした。自分の中でモヤモヤしていたものが少しずつ整理できたと感じています。
-        </p>
-        <div class="voice-name" style="display:flex;align-items:center;gap:10px;">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="#A8A29F" style="flex-shrink:0;"><circle cx="12" cy="7" r="4"/><path d="M20 20c0-4.42-3.58-8-8-8s-8 3.58-8 8"/></svg>
-          <div><strong>参加学生</strong> 筑波大学 / 4年・男性</div>
+        <p class="voice-one">キャリアの不安が、言語化できた2時間でした。</p>
+        <div class="voice-attr">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#A8A29F">
+            <circle cx="12" cy="7" r="4"/>
+            <path d="M20 20c0-4.42-3.58-8-8-8s-8 3.58-8 8"/>
+          </svg>
+          筑波大学 / 4年・男性
         </div>
       </div>
 
       <div class="voice-card">
         <div class="voice-q">"</div>
-        <p class="voice-text">
-          AI時代の中で、私たち学生がこれから果たしていく役割について、じっくり考えるきっかけになりました。普段の就活では出会えない問いに向き合える時間でした。
-        </p>
-        <div class="voice-name" style="display:flex;align-items:center;gap:10px;">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="#A8A29F" style="flex-shrink:0;"><circle cx="12" cy="7" r="4"/><path d="M20 20c0-4.42-3.58-8-8-8s-8 3.58-8 8"/></svg>
-          <div><strong>参加学生</strong> 大正大学 / 4年・女性</div>
+        <p class="voice-one">AI時代の自分の役割を、じっくり考えられるきっかけになりました。</p>
+        <div class="voice-attr">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#A8A29F">
+            <circle cx="12" cy="7" r="4"/>
+            <path d="M20 20c0-4.42-3.58-8-8-8s-8 3.58-8 8"/>
+          </svg>
+          大正大学 / 4年・女性
         </div>
       </div>
 
       <div class="voice-card">
         <div class="voice-q">"</div>
-        <p class="voice-text">
-          もっと詳しく、長くお話を聞きたいと思える時間でした。より多くの人が参加して、就職することの意味を学んでほしいと思える内容でした。
-        </p>
-        <div class="voice-name" style="display:flex;align-items:center;gap:10px;">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="#A8A29F" style="flex-shrink:0;"><circle cx="12" cy="7" r="4"/><path d="M20 20c0-4.42-3.58-8-8-8s-8 3.58-8 8"/></svg>
-          <div><strong>参加学生</strong> 明治学院大学 / 4年・男性</div>
+        <p class="voice-one">もっと長く聞きたいと思えた。それが正直な感想です。</p>
+        <div class="voice-attr">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#A8A29F">
+            <circle cx="12" cy="7" r="4"/>
+            <path d="M20 20c0-4.42-3.58-8-8-8s-8 3.58-8 8"/>
+          </svg>
+          明治学院大学 / 4年・男性
         </div>
       </div>
 
@@ -884,8 +804,11 @@ footer p+p{margin-top:4px}
 
 
 <!-- ===== ABOUT US ===== -->
-<section class="sec sec-cream" id="about">
-  <div class="wrap">
+<section id="about" style="background:#F1F0EF;">
+  <div style="width:100%;height:220px;overflow:hidden;">
+    <img src="img/office.jpg" alt="株式会社エージェント オフィス" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;">
+  </div>
+  <div class="wrap" style="padding-top:48px;padding-bottom:64px;">
     <span class="sec-label">ABOUT US</span>
     <div class="grad-line"></div>
     <h2 class="sec-h2">エージェントとは</h2>
@@ -893,9 +816,11 @@ footer p+p{margin-top:4px}
     <div class="about-facts">
 
       <div class="about-fact">
-        <div style="display:flex;flex-direction:column;align-items:center;gap:4px;min-width:40px;flex-shrink:0;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="#EC2103"><path d="M12 3L2 12h3v8h6v-5h2v5h6v-8h3L12 3z"/></svg>
-          <span class="about-n" style="min-width:auto;">01</span>
+        <div class="about-icon-col">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="#EC2103">
+            <path d="M12 3L2 12h3v8h6v-5h2v5h6v-8h3L12 3z"/>
+          </svg>
+          <span class="about-n">01</span>
         </div>
         <p class="about-txt">
           私たちは、<strong>社会課題を事業開発によって解決する事業開発ファーム</strong>です。課題の深いところに踏み込み、既存の仕組みを変える事業を、自分たちの手で作ります。
@@ -903,9 +828,11 @@ footer p+p{margin-top:4px}
       </div>
 
       <div class="about-fact">
-        <div style="display:flex;flex-direction:column;align-items:center;gap:4px;min-width:40px;flex-shrink:0;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="#EC2103"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 3.21-1.81 6-4.72 7.28L13 17v5h5l-1.22-1.22C19.91 19.07 22 15.76 22 12c0-5.18-3.95-9.45-9-9.95zM11 2.05C5.95 2.55 2 6.82 2 12c0 3.76 2.09 7.07 5.22 8.78L6 22h5v-5l-2.28 2.28C6.81 18 5 15.21 5 12c0-4.08 3.05-7.44 7-7.93V2.05z"/></svg>
-          <span class="about-n" style="min-width:auto;">02</span>
+        <div class="about-icon-col">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="#EC2103">
+            <path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 3.21-1.81 6-4.72 7.28L13 17v5h5l-1.22-1.22C19.91 19.07 22 15.76 22 12c0-5.18-3.95-9.45-9-9.95zM11 2.05C5.95 2.55 2 6.82 2 12c0 3.76 2.09 7.07 5.22 8.78L6 22h5v-5l-2.28 2.28C6.81 18 5 15.21 5 12c0-4.08 3.05-7.44 7-7.93V2.05z"/>
+          </svg>
+          <span class="about-n">02</span>
         </div>
         <p class="about-txt">
           <strong>2034年までに300事業の創出</strong>を、本気で目指しています。大きな目標は、本気で動く人間にしか意味がない。だから私たちは、動き続けます。
@@ -913,9 +840,12 @@ footer p+p{margin-top:4px}
       </div>
 
       <div class="about-fact">
-        <div style="display:flex;flex-direction:column;align-items:center;gap:4px;min-width:40px;flex-shrink:0;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="#EC2103"><circle cx="12" cy="7" r="4"/><path d="M12 13c-4.42 0-8 1.79-8 4v2h16v-2c0-2.21-3.58-4-8-4z"/></svg>
-          <span class="about-n" style="min-width:auto;">03</span>
+        <div class="about-icon-col">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="#EC2103">
+            <circle cx="12" cy="7" r="4"/>
+            <path d="M12 13c-4.42 0-8 1.79-8 4v2h16v-2c0-2.21-3.58-4-8-4z"/>
+          </svg>
+          <span class="about-n">03</span>
         </div>
         <p class="about-txt">
           新卒採用の目的は、<strong>社内起業家人材の育成・輩出</strong>です。事業を動かす側に立てる人間を育てる——それがエージェントの採用の軸です。
@@ -1027,7 +957,7 @@ footer p+p{margin-top:4px}
     <span class="sec-label">APPLY</span>
     <div class="grad-line"></div>
     <h2 class="sec-h2 sec-h2-w">参加を申し込む</h2>
-    <p style="font-size:14px;color:#A8A29F;margin-bottom:32px;line-height:1.9;">
+    <p style="font-size:15px;color:#A8A29F;margin-bottom:32px;line-height:1.9;">
       参加費は無料です。<br>
       少人数制のため、定員に達し次第受付を終了します。
     </p>
@@ -1059,7 +989,7 @@ footer p+p{margin-top:4px}
     </div>
 
     <p class="apply-note">
-      ※ 参加確定後、事前アンケートをお送りします。<br>
+      ※ 申込確定後、事前アンケートをお送りします。<br>
       ※ お問い合わせは
       <a href="mailto:yuki.higasayama@agent-network.com">yuki.higasayama@agent-network.com</a>
       までご連絡ください。
