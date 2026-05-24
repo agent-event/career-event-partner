@@ -190,11 +190,10 @@ a{color:inherit;text-decoration:none;}
 }
 
 /* Carousel */
-.carousel{position:relative;width:100%;height:180px;overflow:hidden;}
-.car-track{display:flex;width:300%;height:100%;transition:transform .35s ease;will-change:transform;}
+.carousel{position:relative;width:100%;aspect-ratio:1600/740;height:auto;overflow:hidden;}
+.car-track{position:absolute;inset:0;display:flex;width:300%;height:100%;transition:transform .35s ease;will-change:transform;}
 .car-slide{width:33.333%;flex-shrink:0;height:100%;}
 .car-slide img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;}
-.car-overlay{position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.3);pointer-events:none;}
 .car-dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:7px;}
 .car-dot{
   width:8px;height:8px;border-radius:50%;
@@ -398,7 +397,7 @@ footer p+p{margin-top:4px;}
 @media(min-width:768px){
   .wrap{max-width:640px;padding:0 32px;}
   .hero-title{font-size:38px;max-width:560px;}
-  .carousel{height:320px;}
+  .carousel{aspect-ratio:auto;height:320px;}
   .sec{padding-left:0;padding-right:0;}
   .fixed-apply{
     max-width:480px;
@@ -508,7 +507,6 @@ footer p+p{margin-top:4px;}
         <div class="car-slide"><img src="img/slide_2.jpg" alt="過去イベントの様子1"></div>
         <div class="car-slide"><img src="img/slide_3.jpg" alt="過去イベントの様子2"></div>
       </div>
-      <div class="car-overlay"></div>
       <div class="car-dots">
         <div class="car-dot active"></div>
         <div class="car-dot"></div>
