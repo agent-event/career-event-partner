@@ -11,7 +11,7 @@
    RESET & BASE
    ============================================================ */
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;overflow-x:hidden;}
+html{overflow-x:hidden;}
 body{
   font-family:'Meiryo','Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3',sans-serif;
   background:#0E0E10;color:#121214;
@@ -156,11 +156,11 @@ a{color:inherit;text-decoration:none;}
   line-height:1.9;margin-bottom:28px;max-width:360px;
 }
 .hero-lead strong{color:#FFFFFF;font-weight:700;}
-.hero-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:28px;}
+.hero-tags{display:flex;flex-wrap:nowrap;gap:4px;margin-bottom:24px;overflow:hidden;}
 .hero-tag{
-  font-size:11px;color:#A8A8A8;
+  font-size:10px;color:#A8A8A8;
   border:1px solid rgba(255,255,255,.12);
-  padding:4px 10px;letter-spacing:.05em;font-weight:600;white-space:nowrap;
+  padding:4px 8px;letter-spacing:.03em;font-weight:600;white-space:nowrap;
 }
 .hero-badge-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;}
 .hero-badge{
@@ -438,7 +438,7 @@ footer p+p{margin-top:4px;}
 <main>
 
 <!-- ① FV -->
-<section class="sec-dark" style="padding:88px 0 76px;" id="top">
+<section class="sec-dark" style="padding:48px 0 76px;" id="top">
   <div class="wrap">
 
     <!-- 1. ロゴ -->
@@ -454,8 +454,9 @@ footer p+p{margin-top:4px;}
 
     <!-- 3. h1 -->
     <h1 class="hero-title">
-      &ldquo;このままで<br>いいのか&rdquo;を、<br>
-      <span>放置できなかった</span><br>人へ。
+      &ldquo;このままでいいのか&rdquo;を、<br>
+      放置できなかった<br>
+      <span>あなたへ</span>
     </h1>
 
     <!-- 4. サブコピー -->
@@ -490,7 +491,7 @@ footer p+p{margin-top:4px;}
 
     <!-- 7. CTA -->
     <div style="margin-top:24px;">
-      <a href="#apply" class="btn-red btn-red-full">事前アンケートに進む</a>
+      <a href="#apply" class="btn-red btn-red-full">申込へ進む</a>
     </div>
 
   </div>
@@ -521,7 +522,7 @@ footer p+p{margin-top:4px;}
   <div class="wrap">
     <span class="sec-label">WHAT IS ASKED</span>
     <div class="grad-line"></div>
-    <h2 class="sec-h2 sec-h2-w">この2時間で、あなたに問われること</h2>
+    <h2 class="sec-h2 sec-h2-w">この２時間で、<br>あなたに問われること</h2>
     <p style="font-size:14px;color:#A8A8A8;line-height:1.85;margin-bottom:36px;">
       このイベントは、会社説明会ではありません。社会課題に向き合う事業責任者・役員との対話を通じて、あなた自身の原体験、違和感、キャリアの選択基準を掘り下げる場です。
     </p>
@@ -568,7 +569,7 @@ footer p+p{margin-top:4px;}
       <p>だから私たちは、若いうちから事業責任を持ち、社会に向き合う人材を育てたいと考えています。</p>
       <p style="font-weight:700;color:#121214;font-size:16px;">2034年までに300事業を創出する。</p>
       <div class="about-quote-block">
-        「社会課題を、誰かではなく自分ごととして捉える人を増やしたい」という思想が、その根底にあります。
+        「社会課題を、誰かではなく自分ごととして捉える人を増やしたい」という考えが、その根底にあります。
       </div>
     </div>
 
@@ -637,7 +638,7 @@ footer p+p{margin-top:4px;}
 
     </div>
     <div class="sec-cta">
-      <a href="#apply" class="btn-outline-red">事前アンケートに進む</a>
+      <a href="#apply" class="btn-outline-red">申込へ進む</a>
     </div>
   </div>
 </section>
@@ -650,11 +651,27 @@ footer p+p{margin-top:4px;}
   <div class="wrap">
     <span class="sec-label">WHAT YOU GET</span>
     <div class="grad-line"></div>
-    <h2 class="sec-h2 sec-h2-w">このイベントで得られるもの</h2>
+    <h2 class="sec-h2 sec-h2-w">2時間後、<br>あなたが得ているもの</h2>
     <div class="outcome-box">
       <p class="outcome-lead">このイベントで得られるのは、<strong>「企業理解」ではありません。</strong></p>
-      <p>自分は何に怒り、何を変えたくて、どんな人生を選びたいのか。</p>
-      <p>その輪郭を、事業責任者との対話を通じて<strong style="color:#FFFFFF;">言語化する2時間です。</strong></p>
+      <p>自分の原体験が「なぜその課題を放置できないのか」という言葉になっている。</p>
+      <p>事業責任者との対話を通じて、<strong style="color:#FFFFFF;">覚悟を問われた経験</strong>がある。</p>
+      <p>採用選考に進むかどうかを、<strong style="color:#FFFFFF;">自分の意思で選べる状態</strong>になっている。</p>
+    </div>
+
+    <div style="margin-top:40px;">
+      <p style="font-size:11px;font-weight:700;letter-spacing:.14em;color:#EC2103;margin-bottom:20px;text-transform:uppercase;">SPECIAL CAREER FLOW</p>
+
+      <div style="margin-bottom:14px;padding:16px 18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);">
+        <p style="font-size:10px;color:#8E8E8E;letter-spacing:.14em;font-weight:700;margin-bottom:10px;text-transform:uppercase;">通常の選考フロー</p>
+        <p style="font-size:12px;color:#8E8E8E;line-height:1.9;">説明会 → 適性検査 → 人事面談 → 執行役員面談 → 人事面談 → 代表面談 → 採用懇親会 → 内定</p>
+      </div>
+
+      <div style="padding:20px 18px;background:#151518;border-left:3px solid #EC2103;">
+        <p style="font-size:10px;color:#EC2103;letter-spacing:.14em;font-weight:700;margin-bottom:12px;text-transform:uppercase;">イベント参加者 特別フロー</p>
+        <p style="font-size:14px;color:#D6D6D6;line-height:1.9;font-weight:700;">イベント参加 → 人事面談 → 執行役員面談 → 人事面談 → 採用懇親会 → <strong style="color:#FFFFFF;">内定</strong></p>
+        <p style="font-size:11px;color:#A8A8A8;margin-top:14px;line-height:1.65;border-top:1px solid rgba(255,255,255,.08);padding-top:12px;">※ 参加内容によっては執行役員面談からスタートの事例あり<br>※ 選考要素を含まない人事面談も可（キャリア相談等）</p>
+      </div>
     </div>
   </div>
 </section>
@@ -688,7 +705,7 @@ footer p+p{margin-top:4px;}
           <p class="tl-body">事前アンケートで集まったテーマをもとに、執行役員・事業責任者3名がトークセッションを行います。「どんな違和感を事業に変えてきたのか」「社会課題を事業として解くうえで何が一番難しいのか」「若いうちから事業を動かすとは、どんな現実に向き合うことなのか」——登壇者の本音で語ります。</p>
           <p class="tl-note">※ 参加確定後にお送りする事前アンケートで質問を受け付けます</p>
           <div class="tl-img">
-            <img src="img/event_02.jpg" alt="登壇者トークセッション">
+            <img src="img/event_02.jpg" alt="登壇者トークセッション" style="transform:scale(1.18);transform-origin:center;">
           </div>
         </div>
       </div>
@@ -716,7 +733,7 @@ footer p+p{margin-top:4px;}
     </div>
 
     <div class="sec-cta">
-      <a href="#apply" class="btn-outline-red">事前アンケートに進む</a>
+      <a href="#apply" class="btn-outline-red">申込へ進む</a>
     </div>
   </div>
 </section>
@@ -766,7 +783,7 @@ footer p+p{margin-top:4px;}
     </div>
 
     <div class="sec-cta">
-      <a href="#apply" class="btn-outline-red">事前アンケートに進む</a>
+      <a href="#apply" class="btn-outline-red">申込へ進む</a>
     </div>
   </div>
 </section>
@@ -869,7 +886,7 @@ footer p+p{margin-top:4px;}
     </div>
 
     <div class="sec-cta">
-      <a href="#apply" class="btn-outline-red">事前アンケートに進む</a>
+      <a href="#apply" class="btn-outline-red">申込へ進む</a>
     </div>
   </div>
 </section>
@@ -895,7 +912,7 @@ footer p+p{margin-top:4px;}
         <p class="ap-time">14:00〜16:00　渋谷・対面実施</p>
         <p class="ap-card-note">13:45 受付開始　申込締切 6/10（火）</p>
         <a href="https://public.n-ats.hrmos.co/agent-network/events/2235953376870334464/schedules/2259653873817288704/apply"
-           class="btn-red btn-red-full">事前アンケートに進む</a>
+           class="btn-red btn-red-full">申込へ進む</a>
       </div>
       <div class="ap-card">
         <span class="ap-lbl">DATE 02</span>
@@ -903,7 +920,7 @@ footer p+p{margin-top:4px;}
         <p class="ap-time">17:00〜19:00　渋谷・対面実施</p>
         <p class="ap-card-note">16:45 受付開始　申込締切 7/1（火）</p>
         <a href="https://public.n-ats.hrmos.co/agent-network/events/2235953376870334464/schedules/2259654106034929664/apply"
-           class="btn-red btn-red-full">事前アンケートに進む</a>
+           class="btn-red btn-red-full">申込へ進む</a>
       </div>
     </div>
   </div>
@@ -920,21 +937,28 @@ footer p+p{margin-top:4px;}
 
 <!-- FIXED BOTTOM CTA — DOM末尾（スクロール復元の誤動作を防ぐ） -->
 <div class="fixed-apply" aria-label="固定申込ボタン">
-  <a href="#apply" class="fcta-btn">事前アンケートに進む</a>
+  <a href="#apply" class="fcta-btn">申込へ進む</a>
 </div>
 
 
 <script>
 (function(){
 
-  /* ── FV先頭表示を保証（ハッシュなしURLは必ずトップへ） ── */
+  /* ── FV先頭表示を保証（ハッシュなしURLは即座にトップへ） ── */
+  function scrollToTop(){
+    window.scrollTo({top:0,left:0,behavior:'instant'});
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }
   function scrollToTopIfNoHash(){
-    if(!window.location.hash){ window.scrollTo({top:0,left:0,behavior:'auto'}); }
+    if(!window.location.hash){ scrollToTop(); }
   }
   window.addEventListener('pageshow', function(){ scrollToTopIfNoHash(); });
   window.addEventListener('load', function(){
     if(!window.location.hash){
-      requestAnimationFrame(function(){ window.scrollTo(0,0); });
+      requestAnimationFrame(function(){
+        requestAnimationFrame(function(){ scrollToTop(); });
+      });
     }
   });
 
@@ -955,6 +979,19 @@ footer p+p{margin-top:4px;}
     a.addEventListener('click', function(){
       overlay.classList.remove('open'); burger.classList.remove('open');
       document.body.style.overflow = '';
+    });
+  });
+
+  /* ── スムーズスクロール（css scroll-behavior の代替、ヘッダー分オフセット） ── */
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var href = this.getAttribute('href');
+      if(!href || href==='#') return;
+      var target = document.querySelector(href);
+      if(!target) return;
+      e.preventDefault();
+      var top = target.getBoundingClientRect().top + window.pageYOffset - 52;
+      window.scrollTo({top:top, behavior:'smooth'});
     });
   });
 
