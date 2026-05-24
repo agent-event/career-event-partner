@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="社会課題を事業で解く覚悟を問う少人数制キャリアイベント。27卒限定・渋谷対面・各回15名・事前アンケート選考あり。役員・事業責任者との1on1｜株式会社エージェント">
 <title>"このままでいいのか"を、放置できなかった人へ。｜株式会社エージェント</title>
-<!-- スクロール復元を手動制御に切り替え — FV先頭表示を確実にする -->
 <script>(function(){if('scrollRestoration' in history){history.scrollRestoration='manual';}}());</script>
 <style>
 /* ============================================================
@@ -17,7 +16,7 @@ body{
   font-family:'Meiryo','Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3',sans-serif;
   background:#0E0E10;color:#121214;
   line-height:1.7;-webkit-font-smoothing:antialiased;
-  padding-top:52px;padding-bottom:60px;
+  padding-top:52px;padding-bottom:72px;
   overflow-x:hidden;font-weight:500;
 }
 img{max-width:100%;display:block;}
@@ -27,7 +26,7 @@ a{color:inherit;text-decoration:none;}
    LAYOUT
    ============================================================ */
 .wrap{max-width:480px;margin:0 auto;padding:0 20px;}
-.sec{padding:72px 0;}
+.sec{padding:64px 0;}
 .sec-white{background:#FFFFFF;}
 .sec-cream{background:#F1F0EF;}
 .sec-dark{background:#0E0E10;color:#FFFFFF;}
@@ -50,10 +49,7 @@ a{color:inherit;text-decoration:none;}
   margin-bottom:28px;color:#121214;
 }
 .sec-h2-w{color:#FFFFFF;}
-.grad-bar{
-  height:2px;
-  background:linear-gradient(to right,#EC2103,#F25A07,#F4A006,#FACD03);
-}
+.grad-bar{height:2px;background:linear-gradient(to right,#EC2103,#F25A07,#F4A006,#FACD03);}
 
 /* ============================================================
    BUTTONS
@@ -62,8 +58,7 @@ a{color:inherit;text-decoration:none;}
   display:inline-block;background:#EC2103;color:#FFF;
   font-size:15px;font-weight:700;
   padding:18px 28px;letter-spacing:.04em;
-  transition:background .2s;cursor:pointer;
-  text-align:center;
+  transition:background .2s;cursor:pointer;text-align:center;
 }
 .btn-red:hover{background:#C90000;color:#FFF;}
 .btn-red-full{display:block;width:100%;text-align:center;}
@@ -71,15 +66,11 @@ a{color:inherit;text-decoration:none;}
 .btn-outline-red{
   display:block;width:100%;text-align:center;
   color:#EC2103;border:1px solid rgba(236,33,3,.55);
-  background:transparent;
-  padding:16px 24px;
+  background:transparent;padding:16px 24px;
   font-size:14px;font-weight:800;letter-spacing:.04em;
   transition:background .2s,border-color .2s;cursor:pointer;
 }
-.btn-outline-red:hover{
-  background:rgba(236,33,3,.08);
-  border-color:#EC2103;
-}
+.btn-outline-red:hover{background:rgba(236,33,3,.08);border-color:#EC2103;}
 
 /* ============================================================
    FIXED HEADER
@@ -100,10 +91,7 @@ a{color:inherit;text-decoration:none;}
   width:36px;height:36px;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:4px;
 }
-.burger span{
-  display:block;width:22px;height:2px;background:#FFF;
-  transition:all .25s;transform-origin:center;
-}
+.burger span{display:block;width:22px;height:2px;background:#FFF;transition:all .25s;transform-origin:center;}
 .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
 .burger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
 .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
@@ -120,23 +108,20 @@ a{color:inherit;text-decoration:none;}
 .nav-overlay.open{opacity:1;visibility:visible;}
 .nav-overlay ul{list-style:none;text-align:center;}
 .nav-overlay ul li{margin:10px 0;}
-.nav-overlay ul li a{
-  font-size:17px;font-weight:700;color:#FFF;letter-spacing:.04em;
-  padding:8px 20px;display:block;transition:color .15s;
-}
+.nav-overlay ul li a{font-size:17px;font-weight:700;color:#FFF;letter-spacing:.04em;padding:8px 20px;display:block;transition:color .15s;}
 .nav-overlay ul li a:hover{color:#EC2103;}
-.nav-overlay ul li a span{
-  font-size:10px;color:#8E8E8E;letter-spacing:.2em;display:block;margin-bottom:4px;
-}
+.nav-overlay ul li a span{font-size:10px;color:#8E8E8E;letter-spacing:.2em;display:block;margin-bottom:4px;}
 
 /* ============================================================
    FIXED BOTTOM CTA — FV通過後に表示
    ============================================================ */
 .fixed-apply{
   position:fixed;bottom:0;left:0;right:0;
-  z-index:480;background:#0A0A0C;
+  padding:10px 12px;
+  background:rgba(10,10,12,.92);
+  backdrop-filter:blur(10px);
   border-top:1px solid rgba(255,255,255,.08);
-  height:56px;padding:8px 12px;
+  z-index:480;
   transform:translateY(100%);
   opacity:0;
   pointer-events:none;
@@ -147,21 +132,20 @@ a{color:inherit;text-decoration:none;}
   opacity:1;
   pointer-events:auto;
 }
-.fcta-single{
+.fcta-btn{
   display:flex;align-items:center;justify-content:center;
-  width:100%;height:100%;
+  width:100%;height:48px;
   background:#EC2103;color:#FFF;
   font-size:14px;font-weight:800;letter-spacing:.04em;
-  transition:background .15s;
 }
-.fcta-single:hover{background:#C90000;color:#FFF;}
+.fcta-btn:hover{background:#C90000;color:#FFF;}
 
 /* ============================================================
    HERO
    ============================================================ */
 .hero-logo{height:22px;margin-bottom:28px;opacity:.85;display:block;}
 .hero-title{
-  font-size:clamp(32px,9.5vw,46px);
+  font-size:clamp(34px,9vw,48px);
   font-weight:900;color:#FFFFFF;
   letter-spacing:-.03em;line-height:1.15;
   margin-bottom:28px;max-width:340px;
@@ -169,8 +153,7 @@ a{color:inherit;text-decoration:none;}
 .hero-title span{color:#EC2103;}
 .hero-lead{
   font-size:15px;color:#D6D6D6;
-  line-height:1.9;margin-bottom:28px;
-  max-width:360px;
+  line-height:1.9;margin-bottom:28px;max-width:360px;
 }
 .hero-lead strong{color:#FFFFFF;font-weight:700;}
 .hero-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:28px;}
@@ -197,9 +180,10 @@ a{color:inherit;text-decoration:none;}
 }
 .hero-meta-row .val{color:#FFFFFF;font-weight:700;line-height:1.65;}
 
-/* FV PC layout */
-.fv-pc-grid{display:block;}
-.fv-pc-right{width:calc(100% + 40px);margin-left:-20px;margin-top:32px;}
+/* FVカルーセル：フルブリード */
+.fv-carousel-wrap{
+  width:calc(100% + 40px);margin-left:-20px;margin-top:36px;
+}
 
 /* Carousel */
 .carousel{position:relative;width:100%;height:180px;overflow:hidden;}
@@ -267,7 +251,7 @@ a{color:inherit;text-decoration:none;}
   font-size:11px;font-weight:900;line-height:1;flex-shrink:0;margin-top:1px;
 }
 .forwho-yes-card .mark{background:rgba(236,33,3,.1);color:#EC2103;}
-.forwho-no-card .mark{background:#D0D0D0;color:#555;}
+.forwho-no-card .mark{background:#D0D0D0;color:#4A4A4A;}
 
 /* ============================================================
    WHAT YOU GET
@@ -327,10 +311,7 @@ a{color:inherit;text-decoration:none;}
 .sp-info .sp-role{font-size:12px;color:#888;line-height:1.4;margin-bottom:2px;}
 .sp-info .sp-role-main{font-size:15px;color:#EC2103;font-weight:800;letter-spacing:.02em;}
 .sp-bio{font-size:13px;color:#3A4256;line-height:1.8;border-top:1px solid #E8E8E8;padding-top:14px;}
-.sp-secret-card{
-  background:#FFFFFF;border:1px dashed rgba(236,33,3,.25);
-  padding:28px 22px;text-align:center;color:#121214;
-}
+.sp-secret-card{background:#FFFFFF;border:1px dashed rgba(236,33,3,.25);padding:28px 22px;text-align:center;color:#121214;}
 .sp-secret-icon{font-size:32px;font-weight:900;color:rgba(236,33,3,.3);margin-bottom:12px;}
 .sp-secret-ttl{font-size:15px;font-weight:800;margin-bottom:8px;}
 .sp-secret-sub{font-size:13px;color:#3A4256;line-height:1.85;margin-bottom:14px;}
@@ -343,9 +324,7 @@ a{color:inherit;text-decoration:none;}
 .voice-card{
   background:#FFFFFF;padding:22px 20px;
   border-left:2px solid #EC2103;
-  border-top:1px solid #EFEFEF;
-  border-right:1px solid #EFEFEF;
-  border-bottom:1px solid #EFEFEF;
+  border-top:1px solid #EFEFEF;border-right:1px solid #EFEFEF;border-bottom:1px solid #EFEFEF;
 }
 .voice-q-label{
   display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;
@@ -368,10 +347,7 @@ a{color:inherit;text-decoration:none;}
 .attention-box{background:#F5F5F5;padding:20px 18px;border-top:2px solid #EC2103;}
 .attention-ttl{font-size:11px;font-weight:700;color:#EC2103;margin-bottom:12px;letter-spacing:.1em;text-transform:uppercase;}
 .attention-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
-.attention-list li{
-  font-size:14px;color:#2A3347;line-height:1.65;
-  display:grid;grid-template-columns:18px 1fr;gap:8px;
-}
+.attention-list li{font-size:14px;color:#2A3347;line-height:1.65;display:grid;grid-template-columns:18px 1fr;gap:8px;}
 .attention-list li::before{
   content:'!';background:#EC2103;color:#FFF;font-size:10px;font-weight:700;
   width:16px;height:16px;flex-shrink:0;
@@ -399,8 +375,6 @@ a{color:inherit;text-decoration:none;}
 .ap-date{color:#FFFFFF;font-size:22px;font-weight:900;margin-bottom:3px;}
 .ap-time{color:#D6D6D6;font-size:15px;margin-top:6px;margin-bottom:14px;}
 .ap-card-note{font-size:11px;color:#A8A8A8;margin-bottom:18px;line-height:1.6;}
-.apply-note{font-size:13px;color:#A8A8A8;line-height:1.7;margin-top:20px;}
-.apply-note a{color:#EC2103;}
 
 .sec-cta{margin-top:40px;}
 
@@ -414,49 +388,20 @@ footer{
 footer p+p{margin-top:4px;}
 
 /* ============================================================
-   PC BREAKPOINT
+   PC（補助対応 — スマホLPが不自然にならない程度）
    ============================================================ */
 @media(min-width:768px){
-  body{padding-top:64px;}
-  .wrap{max-width:1040px;padding:0 40px;}
-  .sec{padding:88px 0;}
-  .site-header{height:64px;padding:0 40px;}
-
-  /* FV 2カラム */
-  .fv-pc-grid{display:flex;gap:72px;align-items:flex-start;}
-  .fv-pc-left{flex:1;min-width:0;}
-  .fv-pc-right{width:440px;flex-shrink:0;margin-left:0;margin-top:0;position:sticky;top:84px;}
-  .fv-pc-right .carousel{height:360px;}
-
-  .hero-title{font-size:56px;max-width:540px;}
-  .hero-lead{max-width:560px;}
-  .hero-meta-box{max-width:480px;}
-  .hero-badge-row{max-width:480px;}
-
-  /* FOR WHO 2カラム */
-  .forwho-grid{flex-direction:row;align-items:stretch;}
-  .forwho-card{flex:1;}
-
-  /* SPEAKERS グリッド */
-  .sp-cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-  .sp-card{border-bottom:none;}
-  .sp-secret-card{grid-column:1/3;}
-
-  /* VOICE 3カラム */
-  .voice-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-
-  /* OVERVIEW dt/dd横並び */
-  .ov-row{flex-direction:row;align-items:baseline;gap:0;}
-  .ov-dt{min-width:180px;flex-shrink:0;padding-top:4px;}
-
-  /* Program */
-  .tl{max-width:680px;}
-  .tl-dot{box-shadow:0 0 0 4px #F1F0EF;}
-  .tl-simple-dot{background:#F1F0EF;}
-  .tl-simple-dot::after{box-shadow:0 0 0 4px #F1F0EF;}
-
-  /* Fixed CTA: PC右寄せ */
-  .fixed-apply{max-width:400px;left:auto;right:24px;bottom:24px;height:52px;}
+  .wrap{max-width:640px;padding:0 32px;}
+  .hero-title{font-size:52px;max-width:560px;}
+  .carousel{height:320px;}
+  .fixed-apply{
+    max-width:480px;
+    left:50%;right:auto;
+    transform:translateX(-50%) translateY(100%);
+  }
+  .fixed-apply.is-visible{
+    transform:translateX(-50%) translateY(0);
+  }
 }
 </style>
 </head>
@@ -491,75 +436,77 @@ footer p+p{margin-top:4px;}
 <main>
 
 <!-- ① FV -->
-<section class="sec-dark" style="padding:48px 0 64px;" id="top">
+<section class="sec-dark" style="padding:48px 0 0;" id="top">
   <div class="wrap">
-    <div class="fv-pc-grid">
 
-      <div class="fv-pc-left">
-        <img src="img/logo-agent-horizontal.png" alt="株式会社エージェント" class="hero-logo">
+    <!-- 1. ロゴ -->
+    <img src="img/logo-agent-horizontal.png" alt="株式会社エージェント" class="hero-logo">
 
-        <div class="hero-tags">
-          <span class="hero-tag">27卒限定</span>
-          <span class="hero-tag">渋谷・対面実施</span>
-          <span class="hero-tag">各回15名</span>
-          <span class="hero-tag">事前選考あり</span>
+    <!-- 2. 対象バッジ -->
+    <div class="hero-tags">
+      <span class="hero-tag">27卒限定</span>
+      <span class="hero-tag">渋谷・対面実施</span>
+      <span class="hero-tag">各回15名</span>
+      <span class="hero-tag">事前選考あり</span>
+    </div>
+
+    <!-- 3. h1 -->
+    <h1 class="hero-title">
+      &ldquo;このままで<br>いいのか&rdquo;を、<br>
+      <span>放置できなかった</span><br>人へ。
+    </h1>
+
+    <!-- 4. サブコピー -->
+    <p class="hero-lead">
+      社会の&ldquo;困った&rdquo;を見過ごせない27卒へ。社会課題を事業で解く役員・事業責任者と向き合い、自分の原体験とキャリアの覚悟を問う<strong>少人数制イベント。</strong>
+    </p>
+
+    <!-- 5. イベント要点バッジ -->
+    <div class="hero-badge-row">
+      <span class="hero-badge">少人数・各回15名</span>
+      <span class="hero-badge">事前アンケート選考あり</span>
+      <span class="hero-badge">役員との1on1あり</span>
+    </div>
+
+    <!-- 6. 日程・会場・定員 -->
+    <div class="hero-meta-box">
+      <div class="hero-meta">
+        <div class="hero-meta-row">
+          <span class="label">日程</span>
+          <span class="val">6月17日（水）14:00～16:00<br>7月8日（水）17:00～19:00</span>
         </div>
-
-        <h1 class="hero-title">
-          &ldquo;このままで<br>いいのか&rdquo;を、<br>
-          <span>放置できなかった</span><br>人へ。
-        </h1>
-
-        <p class="hero-lead">
-          社会の&ldquo;困った&rdquo;を見過ごせない27卒へ。<br>
-          社会課題を事業で解く役員・事業責任者と向き合い、<br>
-          自分の原体験とキャリアの覚悟を問う<strong>少人数制イベント。</strong>
-        </p>
-
-        <div class="hero-badge-row">
-          <span class="hero-badge">少人数・各回15名</span>
-          <span class="hero-badge">事前アンケート選考あり</span>
-          <span class="hero-badge">役員との1on1あり</span>
+        <div class="hero-meta-row">
+          <span class="label">会場</span>
+          <span class="val">東京・渋谷　対面実施</span>
         </div>
-
-        <div class="hero-meta-box">
-          <div class="hero-meta">
-            <div class="hero-meta-row">
-              <span class="label">日程</span>
-              <span class="val">6月17日（水）14:00～16:00<br>7月8日（水）17:00～19:00</span>
-            </div>
-            <div class="hero-meta-row">
-              <span class="label">会場</span>
-              <span class="val">東京・渋谷　対面実施</span>
-            </div>
-            <div class="hero-meta-row">
-              <span class="label">定員</span>
-              <span class="val">各回15名（定員超過時は選考あり）</span>
-            </div>
-          </div>
-        </div>
-
-        <div style="margin-top:24px;">
-          <a href="#apply" class="btn-red btn-red-full">事前アンケートに進む</a>
+        <div class="hero-meta-row">
+          <span class="label">定員</span>
+          <span class="val">各回15名（定員超過時は選考あり）</span>
         </div>
       </div>
+    </div>
 
-      <div class="fv-pc-right">
-        <div class="carousel" id="carousel">
-          <div class="car-track" id="carouselTrack">
-            <div class="car-slide"><img src="img/hero_banner.png" alt="イベントバナー"></div>
-            <div class="car-slide"><img src="img/slide_2.jpg" alt="過去イベントの様子1"></div>
-            <div class="car-slide"><img src="img/slide_3.jpg" alt="過去イベントの様子2"></div>
-          </div>
-          <div class="car-overlay"></div>
-          <div class="car-dots">
-            <div class="car-dot active"></div>
-            <div class="car-dot"></div>
-            <div class="car-dot"></div>
-          </div>
-        </div>
+    <!-- 7. CTA -->
+    <div style="margin-top:24px;">
+      <a href="#apply" class="btn-red btn-red-full">事前アンケートに進む</a>
+    </div>
+
+  </div>
+
+  <!-- 8. カルーセル（CTA後・フルブリード） -->
+  <div class="fv-carousel-wrap">
+    <div class="carousel" id="carousel">
+      <div class="car-track" id="carouselTrack">
+        <div class="car-slide"><img src="img/hero_banner.png" alt="イベントバナー"></div>
+        <div class="car-slide"><img src="img/slide_2.jpg" alt="過去イベントの様子1"></div>
+        <div class="car-slide"><img src="img/slide_3.jpg" alt="過去イベントの様子2"></div>
       </div>
-
+      <div class="car-overlay"></div>
+      <div class="car-dots">
+        <div class="car-dot active"></div>
+        <div class="car-dot"></div>
+        <div class="car-dot"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -572,8 +519,8 @@ footer p+p{margin-top:4px;}
   <div class="wrap">
     <span class="sec-label">WHAT IS ASKED</span>
     <div class="grad-line"></div>
-    <h2 class="sec-h2 sec-h2-w" style="max-width:280px;">この2時間で、あなたに問われること</h2>
-    <p style="font-size:14px;color:#A8A8A8;line-height:1.85;margin-bottom:36px;max-width:520px;">
+    <h2 class="sec-h2 sec-h2-w">この2時間で、あなたに問われること</h2>
+    <p style="font-size:14px;color:#A8A8A8;line-height:1.85;margin-bottom:36px;">
       このイベントは、会社説明会ではありません。社会課題に向き合う事業責任者・役員との対話を通じて、あなた自身の原体験、違和感、キャリアの選択基準を掘り下げる場です。
     </p>
     <div class="challenge-cards">
@@ -601,7 +548,7 @@ footer p+p{margin-top:4px;}
   <div class="wrap">
     <span class="sec-label">ABOUT US</span>
     <div class="grad-line"></div>
-    <h2 class="sec-h2" style="max-width:300px;line-height:1.35;">
+    <h2 class="sec-h2" style="line-height:1.35;">
       AGENTは、<br>
       <span style="color:#EC2103;">&ldquo;自分がやるしかない&rdquo;</span><br>
       と思える人を増やしたい。
@@ -676,13 +623,13 @@ footer p+p{margin-top:4px;}
             <circle cx="12" cy="7" r="4" opacity=".5"/>
             <path d="M12 13c-4.42 0-8 1.79-8 4v2h16v-2c0-2.21-3.58-4-8-4z" opacity=".4"/>
           </svg>
-          <span class="forwho-lbl" style="color:#555;">向いていない方</span>
+          <span class="forwho-lbl" style="color:#4A4A4A;">向いていない方</span>
         </div>
         <ul class="forwho-list">
-          <li><span class="mark">×</span><span style="color:#555;">なんとなく就活イベントに参加したい方</span></li>
-          <li><span class="mark">×</span><span style="color:#555;">会社説明だけを聞きたい方</span></li>
-          <li><span class="mark">×</span><span style="color:#555;">条件面だけで企業を比較したい方</span></li>
-          <li><span class="mark">×</span><span style="color:#555;">社会課題への関心はあるが、自分で行動する意思がない方</span></li>
+          <li><span class="mark">×</span><span style="color:#4A4A4A;">なんとなく就活イベントに参加したい方</span></li>
+          <li><span class="mark">×</span><span style="color:#4A4A4A;">会社説明だけを聞きたい方</span></li>
+          <li><span class="mark">×</span><span style="color:#4A4A4A;">条件面だけで企業を比較したい方</span></li>
+          <li><span class="mark">×</span><span style="color:#4A4A4A;">社会課題への関心はあるが、自分で行動する意思がない方</span></li>
         </ul>
       </div>
 
@@ -701,7 +648,7 @@ footer p+p{margin-top:4px;}
   <div class="wrap">
     <span class="sec-label">WHAT YOU GET</span>
     <div class="grad-line"></div>
-    <h2 class="sec-h2 sec-h2-w" style="max-width:280px;">このイベントで得られるもの</h2>
+    <h2 class="sec-h2 sec-h2-w">このイベントで得られるもの</h2>
     <div class="outcome-box">
       <p class="outcome-lead">このイベントで得られるのは、<strong>「企業理解」ではありません。</strong></p>
       <p>自分は何に怒り、何を変えたくて、どんな人生を選びたいのか。</p>
@@ -736,9 +683,7 @@ footer p+p{margin-top:4px;}
             </svg>
             登壇者3名による本音トーク
           </h3>
-          <p class="tl-body">
-            事前アンケートで集まったテーマをもとに、執行役員・事業責任者3名がトークセッションを行います。「どんな違和感を事業に変えてきたのか」「社会課題を事業として解くうえで、何が一番難しいのか」「若いうちから事業を動かすとは、どんな現実に向き合うことなのか」——登壇者の本音で語ります。
-          </p>
+          <p class="tl-body">事前アンケートで集まったテーマをもとに、執行役員・事業責任者3名がトークセッションを行います。「どんな違和感を事業に変えてきたのか」「社会課題を事業として解くうえで何が一番難しいのか」「若いうちから事業を動かすとは、どんな現実に向き合うことなのか」——登壇者の本音で語ります。</p>
           <p class="tl-note">※ 参加確定後にお送りする事前アンケートで質問を受け付けます</p>
           <div class="tl-img">
             <img src="img/event_02.jpg" alt="登壇者トークセッション">
@@ -759,9 +704,7 @@ footer p+p{margin-top:4px;}
             </svg>
             登壇者と1対1で話せる時間
           </h3>
-          <p class="tl-body">
-            各自1名・15分の個別セッション。事前アンケートをもとに最適な登壇者をマッチングします。複数人数では聞けない本音を、1対1の15分で引き出してください。
-          </p>
+          <p class="tl-body">各自1名・15分の個別セッション。事前アンケートをもとに最適な登壇者をマッチングします。複数人数では聞けない本音を、1対1の15分で引き出してください。</p>
           <p class="tl-note">※ マッチング結果は開催前日までにご連絡します</p>
           <div class="tl-img">
             <img src="img/event_01.png" alt="1on1セッション" style="object-position:50% 15%;">
@@ -888,7 +831,7 @@ footer p+p{margin-top:4px;}
       </div>
       <div class="ov-row">
         <dt class="ov-dt">定員</dt>
-        <dd class="ov-dd">各回 <strong>15名</strong><span style="font-size:12px;color:#8E8E8E;margin-left:8px;">※ 超過時は事前アンケートで選考</span></dd>
+        <dd class="ov-dd">各回 <strong>15名</strong><span class="ov-note" style="display:inline;margin-left:8px;">※ 超過時は事前アンケートで選考</span></dd>
       </div>
       <div class="ov-row">
         <dt class="ov-dt">申込締切</dt>
@@ -961,7 +904,6 @@ footer p+p{margin-top:4px;}
            class="btn-red btn-red-full">事前アンケートに進む</a>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -971,21 +913,23 @@ footer p+p{margin-top:4px;}
 <footer>
   <p>株式会社エージェント</p>
   <p>© 2026 Agent Network Co., Ltd. All Rights Reserved.</p>
-  <p style="margin-top:12px;font-size:11px;opacity:.6;">お問い合わせ・27卒以外の方の相談：yuki.higasayama@agent-network.com</p>
+  <p style="margin-top:10px;font-size:11px;opacity:.55;">お問い合わせ：yuki.higasayama@agent-network.com</p>
 </footer>
 
-<!-- FIXED BOTTOM CTA — DOM末尾に配置（スクロール復元の誤動作を防ぐ） -->
+<!-- FIXED BOTTOM CTA — DOM末尾（スクロール復元の誤動作を防ぐ） -->
 <div class="fixed-apply" aria-label="固定申込ボタン">
-  <a href="#apply" class="fcta-single">事前アンケートに進む</a>
+  <a href="#apply" class="fcta-btn">事前アンケートに進む</a>
 </div>
 
 
 <script>
 (function(){
-  /* ── スクロール復元：ハッシュなしURLは必ずFVから ── */
-  window.addEventListener('pageshow', function(){
+
+  /* ── FV先頭表示を保証（ハッシュなしURLは必ずトップへ） ── */
+  function scrollToTopIfNoHash(){
     if(!window.location.hash){ window.scrollTo({top:0,left:0,behavior:'auto'}); }
-  });
+  }
+  window.addEventListener('pageshow', function(){ scrollToTopIfNoHash(); });
   window.addEventListener('load', function(){
     if(!window.location.hash){
       requestAnimationFrame(function(){ window.scrollTo(0,0); });
@@ -1012,11 +956,11 @@ footer p+p{margin-top:4px;}
     });
   });
 
-  /* ── カルーセル（循環ナビ） ── */
-  var track  = document.getElementById('carouselTrack');
-  var dots   = document.querySelectorAll('.car-dot');
-  var total  = track ? track.children.length : 0;
-  var cur    = 0, startX = 0;
+  /* ── カルーセル（循環） ── */
+  var track = document.getElementById('carouselTrack');
+  var dots  = document.querySelectorAll('.car-dot');
+  var total = track ? track.children.length : 0;
+  var cur   = 0, startX = 0;
 
   function goTo(n){
     cur = ((n % total) + total) % total;
@@ -1035,7 +979,7 @@ footer p+p{margin-top:4px;}
     goTo(0);
   }
 
-  /* ── 固定CTA：FVを70%スクロール通過後に表示 ── */
+  /* ── 固定CTA：FVを70%通過後に表示 ── */
   var hero       = document.getElementById('top');
   var fixedApply = document.querySelector('.fixed-apply');
   if(hero && fixedApply && 'IntersectionObserver' in window){
@@ -1046,6 +990,7 @@ footer p+p{margin-top:4px;}
     }, { threshold:0, rootMargin:'-70% 0px 0px 0px' });
     io.observe(hero);
   }
+
 })();
 </script>
 
