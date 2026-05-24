@@ -16,7 +16,7 @@ body{
   font-family:'Meiryo','Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3',sans-serif;
   background:#0E0E10;color:#121214;
   line-height:1.7;-webkit-font-smoothing:antialiased;
-  padding-top:52px;padding-bottom:72px;
+  padding-top:52px;padding-bottom:80px;
   overflow-x:hidden;font-weight:500;
 }
 img{max-width:100%;display:block;}
@@ -132,13 +132,17 @@ a{color:inherit;text-decoration:none;}
   opacity:1;
   pointer-events:auto;
 }
+.fcta-row{display:flex;gap:8px;}
 .fcta-btn{
-  display:flex;align-items:center;justify-content:center;
-  width:100%;height:48px;
+  flex:1;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  height:52px;
   background:#EC2103;color:#FFF;
-  font-size:14px;font-weight:800;letter-spacing:.04em;
+  font-size:13px;font-weight:800;letter-spacing:.04em;
+  line-height:1.3;
 }
 .fcta-btn:hover{background:#C90000;color:#FFF;}
+.fcta-month{font-size:11px;font-weight:700;opacity:.85;}
 
 /* ============================================================
    HERO
@@ -937,7 +941,16 @@ footer p+p{margin-top:4px;}
 
 <!-- FIXED BOTTOM CTA — DOM末尾（スクロール復元の誤動作を防ぐ） -->
 <div class="fixed-apply" aria-label="固定申込ボタン">
-  <a href="#apply" class="fcta-btn">申込へ進む</a>
+  <div class="fcta-row">
+    <a href="https://public.n-ats.hrmos.co/agent-network/events/2235953376870334464/schedules/2259653873817288704/apply"
+       class="fcta-btn" target="_blank" rel="noopener">
+      <span class="fcta-month">6月17日（水）</span>申込へ進む
+    </a>
+    <a href="https://public.n-ats.hrmos.co/agent-network/events/2235953376870334464/schedules/2259654106034929664/apply"
+       class="fcta-btn" target="_blank" rel="noopener">
+      <span class="fcta-month">7月8日（水）</span>申込へ進む
+    </a>
+  </div>
 </div>
 
 
