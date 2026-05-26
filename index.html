@@ -190,11 +190,11 @@ a{color:inherit;text-decoration:none;}
 }
 
 /* Carousel */
-.carousel{position:relative;width:100%;aspect-ratio:1600/740;height:auto;overflow:hidden;}
-.car-track{position:absolute;inset:0;display:flex;width:300%;height:100%;transition:transform .35s ease;will-change:transform;}
-.car-slide{width:33.333%;flex-shrink:0;height:100%;}
-.car-slide img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;}
-.car-dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:7px;}
+.carousel{position:relative;width:100%;overflow:hidden;}
+.car-track{display:flex;width:300%;transition:transform .35s ease;will-change:transform;}
+.car-slide{width:33.333%;flex-shrink:0;}
+.car-slide img{width:100%;height:auto;display:block;}
+.car-dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:2;}
 .car-dot{
   width:8px;height:8px;border-radius:50%;
   background:rgba(255,255,255,.3);cursor:pointer;
@@ -215,9 +215,9 @@ a{color:inherit;text-decoration:none;}
    ============================================================ */
 .about-office-inner{
   width:calc(100% + 40px);margin-left:-20px;
-  height:200px;overflow:hidden;margin-bottom:36px;opacity:.92;
+  overflow:hidden;margin-bottom:36px;opacity:.92;
 }
-.about-office-inner img{width:100%;height:100%;object-fit:cover;object-position:center 30%;}
+.about-office-inner img{width:100%;height:auto;display:block;}
 .about-thought-body{font-size:15px;color:#3A4256;line-height:1.95;}
 .about-thought-body p+p{margin-top:18px;}
 .about-emphasis{
@@ -464,7 +464,7 @@ footer p+p{margin-top:4px;}
 
     <!-- 4. サブコピー -->
     <p class="hero-lead">
-      社会の&ldquo;困った&rdquo;を見過ごせない27卒へ。社会課題を事業で解く役員・事業責任者と向き合い、自分の原体験とキャリアの覚悟を問う<strong>少人数制イベント。</strong>
+      社会の&ldquo;困った&rdquo;を見過ごせない27卒へ。社会課題を事業開発によって解決している役員・事業責任者と向き合い、自分自身が解決をしたい課題とキャリアの覚悟を問う<strong>少人数制イベント。</strong>
     </p>
 
     <!-- 5. イベント要点バッジ -->
@@ -526,7 +526,7 @@ footer p+p{margin-top:4px;}
     <div class="grad-line"></div>
     <h2 class="sec-h2 sec-h2-w">この２時間で、<br>あなたに問われること</h2>
     <p style="font-size:14px;color:#A8A8A8;line-height:1.85;margin-bottom:36px;">
-      このイベントは、会社説明会ではありません。社会課題に向き合う事業責任者・役員との対話を通じて、あなた自身の原体験、違和感、キャリアの選択基準を掘り下げる場です。
+      このイベントは、会社説明会ではありません。社会課題に向き合う事業責任者・役員との対話を通じて、あなた自身の解決したい課題、違和感、キャリアに対して、どのような打ち手を実行していけばよいのかを見つける場です。
     </p>
     <div class="challenge-cards">
       <div class="challenge-card">
@@ -554,9 +554,9 @@ footer p+p{margin-top:4px;}
     <span class="sec-label">ABOUT US</span>
     <div class="grad-line"></div>
     <h2 class="sec-h2" style="line-height:1.35;">
-      AGENTは、<br>
+      エージェントは、社会の課題に対して、<br>
       <span style="color:#EC2103;">&ldquo;自分がやるしかない&rdquo;</span><br>
-      と思える人を増やしたい。
+      と思える人を増やす会社です。
     </h2>
 
     <div class="about-office-inner">
@@ -564,14 +564,13 @@ footer p+p{margin-top:4px;}
     </div>
 
     <div class="about-thought-body">
-      <p>AGENTは、「優秀な人材を増やす」会社ではありません。</p>
       <p>社会の課題に対して、</p>
       <p class="about-emphasis">&ldquo;自分がやるしかない&rdquo;</p>
       <p>と思える人を増やす会社です。</p>
       <p>だから私たちは、若いうちから事業責任を持ち、社会に向き合う人材を育てたいと考えています。</p>
-      <p style="font-weight:700;color:#121214;font-size:16px;">2034年までに300事業を創出する。</p>
+      <p style="font-weight:700;color:#121214;font-size:16px;">2030年までに300事業を創出する。</p>
       <div class="about-quote-block">
-        「社会課題を、誰かではなく自分ごととして捉える人を増やしたい」という考えが、その根底にあります。
+        社会課題を本気で解決するために、ソーシャルビジネスを300事業創出し、社会的に大きなインパクトを与えたいという考えを持っている会社です。
       </div>
     </div>
 
@@ -615,10 +614,6 @@ footer p+p{margin-top:4px;}
             <span class="mark">→</span>
             <span style="color:#2A3347;">安定した正解より、自分で問いを立てて動くキャリアを選びたい</span>
           </li>
-          <li>
-            <span class="mark">→</span>
-            <span style="color:#2A3347;">きれいごとではなく、事業として社会課題に向き合う難しさを知りたい</span>
-          </li>
         </ul>
       </div>
 
@@ -655,10 +650,9 @@ footer p+p{margin-top:4px;}
     <div class="grad-line"></div>
     <h2 class="sec-h2 sec-h2-w">2時間後、<br>あなたが得ているもの</h2>
     <div class="outcome-box">
-      <p class="outcome-lead">このイベントで得られるのは、<strong>「企業理解」ではありません。</strong></p>
-      <p>自分の原体験が「なぜその課題を放置できないのか」という言葉になっている。</p>
-      <p>事業責任者との対話を通じて、<strong style="color:#FFFFFF;">覚悟を問われた経験</strong>がある。</p>
-      <p>採用選考に進むかどうかを、<strong style="color:#FFFFFF;">自分の意思で選べる状態</strong>になっている。</p>
+      <p>自分自身が解決したい課題が、なぜその課題を放置できないのかという言葉になっている。</p>
+      <p>事業責任者との対話を通じて、<strong style="color:#FFFFFF;">本気で解決したいか覚悟を問われた経験</strong>がある。</p>
+      <p>自身が解決したい課題に基づいて、<strong style="color:#FFFFFF;">就活やキャリアの選択をできる状態</strong>になっている。</p>
     </div>
 
     <div style="margin-top:40px;">
@@ -704,7 +698,7 @@ footer p+p{margin-top:4px;}
             </svg>
             登壇者3名による本音トーク
           </h3>
-          <p class="tl-body">事前アンケートで集まったテーマをもとに、執行役員・事業責任者3名がトークセッションを行います。「どんな違和感を事業に変えてきたのか」「社会課題を事業として解くうえで何が一番難しいのか」「若いうちから事業を動かすとは、どんな現実に向き合うことなのか」——登壇者の本音で語ります。</p>
+          <p class="tl-body">事前アンケートで集まったテーマをもとに、執行役員・事業責任者3名がトークセッションを行います。「どんな違和感を事業に変えてきたのか」「社会課題を事業例として、事業開発で解決していく上でどのようなことを行ったのか」「若いうちから事業を動かす上で必要なスキルや考え方は何か」——登壇者の本音で語ります。</p>
           <p class="tl-note">※ 参加確定後にお送りする事前アンケートで質問を受け付けます</p>
           <div class="tl-img">
             <img src="img/event_02.jpg" alt="登壇者トークセッション">
